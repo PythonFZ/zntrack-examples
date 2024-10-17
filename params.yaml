@@ -1,2 +1,4 @@
-ParamsToOuts:
-  params: Hello, World!
+ParamsToMetrics:
+  params:
+    accuracy: 0.9
+    loss: 0.1

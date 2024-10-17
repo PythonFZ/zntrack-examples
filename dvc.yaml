@@ -1,10 +1,10 @@
 stages:
-  ParamsToOuts:
-    cmd: zntrack run zntrack.examples.ParamsToOuts --name ParamsToOuts
+  ParamsToMetrics:
+    cmd: zntrack run zntrack.examples.ParamsToMetrics --name ParamsToMetrics
     metrics:
-    - nodes/ParamsToOuts/node-meta.json:
+    - nodes/ParamsToMetrics/metrics.json:
         cache: false
-    outs:
-    - nodes/ParamsToOuts/outs.json
+    - nodes/ParamsToMetrics/node-meta.json:
+        cache: false
     params:
-    - ParamsToOuts
+    - ParamsToMetrics

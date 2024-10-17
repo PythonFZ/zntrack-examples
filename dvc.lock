@@ -1,17 +1,19 @@
 schema: '2.0'
 stages:
-  ParamsToOuts:
-    cmd: zntrack run zntrack.examples.ParamsToOuts --name ParamsToOuts
+  ParamsToMetrics:
+    cmd: zntrack run zntrack.examples.ParamsToMetrics --name ParamsToMetrics
     params:
       params.yaml:
-        ParamsToOuts:
-          params: Hello, World!
+        ParamsToMetrics:
+          params:
+            accuracy: 0.9
+            loss: 0.1
     outs:
-    - path: nodes/ParamsToOuts/node-meta.json
+    - path: nodes/ParamsToMetrics/metrics.json
       hash: md5
-      md5: 80ab3dc8b4618d44c7000a911d9c8cc7
+      md5: 928212bf3e7a9fba0bd1671af1065a16
+      size: 30
+    - path: nodes/ParamsToMetrics/node-meta.json
+      hash: md5
+      md5: 68ebd22dea3ca78437f498a4727cb280
       size: 64
-    - path: nodes/ParamsToOuts/outs.json
-      hash: md5
-      md5: 7959b2c4af2fd6d142ba32babd30ceb7
-      size: 15
