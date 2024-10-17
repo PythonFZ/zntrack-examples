@@ -1,0 +1,17 @@
+schema: '2.0'
+stages:
+  ParamsToOuts:
+    cmd: zntrack run zntrack.examples.ParamsToOuts --name ParamsToOuts
+    params:
+      params.yaml:
+        ParamsToOuts:
+          params: Hello, World!
+    outs:
+    - path: nodes/ParamsToOuts/node-meta.json
+      hash: md5
+      md5: 80ab3dc8b4618d44c7000a911d9c8cc7
+      size: 64
+    - path: nodes/ParamsToOuts/outs.json
+      hash: md5
+      md5: 7959b2c4af2fd6d142ba32babd30ceb7
+      size: 15
