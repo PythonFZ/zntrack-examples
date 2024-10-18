@@ -4,5 +4,17 @@
             "_type": "pathlib.Path",
             "value": "nodes/ParamsToMetrics"
         }
+    },
+    "plots_WritePlots": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/plots/WritePlots"
+        }
+    },
+    "plots_WritePlots_1": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/plots/WritePlots_1"
+        }
     }
 }

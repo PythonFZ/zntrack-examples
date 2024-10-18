@@ -1,3 +1,14 @@
+plots:
+- plots_WritePlots_plots:
+    x:
+      nodes/plots/WritePlots/plots.csv: x
+    y:
+      nodes/plots/WritePlots/plots.csv: y
+- plots_WritePlots_1_plots:
+    x:
+      nodes/plots/WritePlots_1/plots.csv: x
+    y:
+      nodes/plots/WritePlots_1/plots.csv: y
 stages:
   ParamsToMetrics:
     cmd: zntrack run zntrack.examples.ParamsToMetrics --name ParamsToMetrics
@@ -8,3 +19,21 @@ stages:
         cache: false
     params:
     - ParamsToMetrics
+  plots_WritePlots:
+    cmd: zntrack run zntrack.examples.WritePlots --name plots_WritePlots
+    metrics:
+    - nodes/plots/WritePlots/node-meta.json:
+        cache: false
+    outs:
+    - nodes/plots/WritePlots/plots.csv
+    params:
+    - plots_WritePlots
+  plots_WritePlots_1:
+    cmd: zntrack run zntrack.examples.WritePlots --name plots_WritePlots_1
+    metrics:
+    - nodes/plots/WritePlots_1/node-meta.json:
+        cache: false
+    outs:
+    - nodes/plots/WritePlots_1/plots.csv
+    params:
+    - plots_WritePlots_1

@@ -17,3 +17,75 @@ stages:
       hash: md5
       md5: 68ebd22dea3ca78437f498a4727cb280
       size: 64
+  plots_WritePlots:
+    cmd: zntrack run zntrack.examples.WritePlots --name plots_WritePlots
+    params:
+      params.yaml:
+        plots_WritePlots:
+          x:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          y:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+    outs:
+    - path: nodes/plots/WritePlots/node-meta.json
+      hash: md5
+      md5: f2c04c7c6b81f5572b8c046d9d3dec2c
+      size: 64
+    - path: nodes/plots/WritePlots/plots.csv
+      hash: md5
+      md5: e3f2b5876a4da68d27324d37e1b29268
+      size: 65
+  plots_WritePlots_1:
+    cmd: zntrack run zntrack.examples.WritePlots --name plots_WritePlots_1
+    params:
+      params.yaml:
+        plots_WritePlots_1:
+          x:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          y:
+          - 1.0
+          - 1.1175190687418637
+          - 1.2488488690016821
+          - 1.3956124250860895
+          - 1.5596234976067807
+          - 1.7429089986334578
+          - 1.9477340410546757
+          - 2.176629931716248
+          - 2.4324254542872077
+          - 2.718281828459045
+    outs:
+    - path: nodes/plots/WritePlots_1/node-meta.json
+      hash: md5
+      md5: db368c8be04e23a8cbfd045afa6b6886
+      size: 64
+    - path: nodes/plots/WritePlots_1/plots.csv
+      hash: md5
+      md5: 79990e515550efd968acdca3320809ee
+      size: 218
