@@ -10,6 +10,15 @@ plots:
     y:
       nodes/plots/WritePlots_1/plots.csv: y
 stages:
+  NumericOuts:
+    cmd: zntrack run zntrack.examples.ParamsToOuts --name NumericOuts
+    metrics:
+    - nodes/NumericOuts/node-meta.json:
+        cache: false
+    outs:
+    - nodes/NumericOuts/outs.json
+    params:
+    - NumericOuts
   ParamsToMetrics:
     cmd: zntrack run zntrack.examples.ParamsToMetrics --name ParamsToMetrics
     metrics:
@@ -19,6 +28,15 @@ stages:
         cache: false
     params:
     - ParamsToMetrics
+  StringOuts:
+    cmd: zntrack run zntrack.examples.ParamsToOuts --name StringOuts
+    metrics:
+    - nodes/StringOuts/node-meta.json:
+        cache: false
+    outs:
+    - nodes/StringOuts/outs.json
+    params:
+    - StringOuts
   plots_WritePlots:
     cmd: zntrack run zntrack.examples.WritePlots --name plots_WritePlots
     metrics:

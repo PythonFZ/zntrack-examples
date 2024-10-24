@@ -5,6 +5,18 @@
             "value": "nodes/ParamsToMetrics"
         }
     },
+    "StringOuts": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/StringOuts"
+        }
+    },
+    "NumericOuts": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/NumericOuts"
+        }
+    },
     "plots_WritePlots": {
         "nwd": {
             "_type": "pathlib.Path",

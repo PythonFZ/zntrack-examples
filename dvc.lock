@@ -89,3 +89,33 @@ stages:
       hash: md5
       md5: 79990e515550efd968acdca3320809ee
       size: 218
+  NumericOuts:
+    cmd: zntrack run zntrack.examples.ParamsToOuts --name NumericOuts
+    params:
+      params.yaml:
+        NumericOuts:
+          params: 42
+    outs:
+    - path: nodes/NumericOuts/node-meta.json
+      hash: md5
+      md5: e83fe04b2e103dccfd8481c493b22a7f
+      size: 64
+    - path: nodes/NumericOuts/outs.json
+      hash: md5
+      md5: a1d0c6e83f027327d8461063f4ac58a6
+      size: 2
+  StringOuts:
+    cmd: zntrack run zntrack.examples.ParamsToOuts --name StringOuts
+    params:
+      params.yaml:
+        StringOuts:
+          params: Lorem ipsum
+    outs:
+    - path: nodes/StringOuts/node-meta.json
+      hash: md5
+      md5: fcf73eba5427744e58b20ddd05c3dade
+      size: 64
+    - path: nodes/StringOuts/outs.json
+      hash: md5
+      md5: b4c4257a14dfa46184441cee5db24a88
+      size: 13
