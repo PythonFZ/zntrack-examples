@@ -1,5 +1,6 @@
-import zntrack.examples
 import numpy as np
+
+import zntrack.examples
 
 project = zntrack.Project()
 
@@ -9,14 +10,8 @@ with project:
     )
 
 with project.group("outs"):
-    zntrack.examples.ParamsToOuts(
-        params="Lorem ipsum",
-        name="StringOuts"
-    )
-    zntrack.examples.ParamsToOuts(
-        params=42,
-        name="NumericOuts"
-    )
+    zntrack.examples.ParamsToOuts(params="Lorem ipsum", name="StringOuts")
+    zntrack.examples.ParamsToOuts(params=42, name="NumericOuts")
 with project.group("plots"):
     zntrack.examples.WritePlots(
         x=list(range(10)),
