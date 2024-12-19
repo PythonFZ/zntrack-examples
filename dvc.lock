@@ -47,7 +47,7 @@ stages:
     outs:
     - path: nodes/plots/WritePlots/node-meta.json
       hash: md5
-      md5: 82496487fecc2b50a6d0e81961b2deaa
+      md5: 1cbadad4c6691b998e7f7fa247dc7029
       size: 64
     - path: nodes/plots/WritePlots/plots.csv
       hash: md5
