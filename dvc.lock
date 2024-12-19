@@ -113,7 +113,7 @@ stages:
     outs:
     - path: nodes/StringOuts/node-meta.json
       hash: md5
-      md5: 6c5c340430b94483bba4f29b5f57e647
+      md5: ba3d54f161fe278a3351cf00330cf309
       size: 64
     - path: nodes/StringOuts/outs.json
       hash: md5
