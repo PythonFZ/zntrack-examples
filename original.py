@@ -4,7 +4,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.colors import ListedColormap
-
 from sklearn.datasets import make_circles, make_classification, make_moons
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier

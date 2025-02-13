@@ -1,11 +1,12 @@
-import zntrack
-import typing as t
 import dataclasses
+import typing as t
 from pathlib import Path
+
+import zntrack
 
 
 class CreateDataset(zntrack.Node):
-    params: dict = zntrack.params()
+    params: dict = zntrack.params(default_factory=dict)
     method: t.Literal["make_moons", "make_circles", "linearly_separable"] = (
         zntrack.params()
     )
@@ -14,8 +15,8 @@ class CreateDataset(zntrack.Node):
     y: t.Any = zntrack.outs()
 
     def run(self) -> None:
-        from sklearn.datasets import make_circles, make_classification, make_moons
         import numpy as np
+        from sklearn.datasets import make_circles, make_classification, make_moons
 
         if self.method == "make_moons":
             self.x, self.y = make_moons(**self.params)
@@ -64,7 +65,7 @@ class Model:
         "QuadraticDiscriminantAnalysis",
     ]
     params: dict = dataclasses.field(default_factory=dict)
-    name: str|None = None
+    name: str | None = None
 
     def __post_init__(self):
         if self.name is None:
@@ -126,12 +127,10 @@ class Classifier(zntrack.Node):
         self.metrics = {"score": model.score(self.x_test, self.y_test)}
         self.get_figure(model)
 
-    
     def get_figure(self, clf):
-        from sklearn.inspection import DecisionBoundaryDisplay
         import matplotlib.pyplot as plt
         from matplotlib.colors import ListedColormap
-
+        from sklearn.inspection import DecisionBoundaryDisplay
 
         fig, ax = plt.subplots()
 
@@ -141,12 +140,17 @@ class Classifier(zntrack.Node):
         cm = plt.cm.RdBu
         cm_bright = ListedColormap(["#FF0000", "#0000FF"])
 
-        DecisionBoundaryDisplay.from_estimator(clf, self.x, cmap=cm, alpha=0.8, ax=ax, eps=0.5)
-
+        DecisionBoundaryDisplay.from_estimator(
+            clf, self.x, cmap=cm, alpha=0.8, ax=ax, eps=0.5
+        )
 
         # Plot the training points
         ax.scatter(
-            self.x_train[:, 0], self.x_train[:, 1], c=self.y_train, cmap=cm_bright, edgecolors="k"
+            self.x_train[:, 0],
+            self.x_train[:, 1],
+            c=self.y_train,
+            cmap=cm_bright,
+            edgecolors="k",
         )
         # Plot the testing points
         ax.scatter(
@@ -164,4 +168,41 @@ class Classifier(zntrack.Node):
         ax.set_yticks(())
 
         self.figure_path.parent.mkdir(exist_ok=True, parents=True)
-        fig.savefig(self.figure_path)
+        fig.savefig(self.figure_path, bbox_inches="tight")
+
+
+class CombineFigures(zntrack.Node):
+    cfs: list[Classifier] = zntrack.deps()
+    combined_figure_path: Path = zntrack.plots_path(zntrack.nwd / "combined_figure.png")
+
+    def run(self):
+        import matplotlib.pyplot as plt
+        import numpy as np
+        from PIL import Image
+
+        # Determine grid size
+        n_cols = int(len(self.cfs) ** 0.5)
+        n_rows = (len(self.cfs) + n_cols - 1) // n_cols
+
+        # Create figure with tight spacing
+        fig, axs = plt.subplots(n_rows, n_cols, figsize=(n_cols * 4, n_rows * 4))
+        axs = np.array(axs).reshape(n_rows, n_cols)  # Ensure axs is always iterable
+
+        # Remove unnecessary padding
+        fig.subplots_adjust(left=0, right=1, top=1, bottom=0, wspace=0, hspace=0.0)
+
+        # Display images
+        for i, cf in enumerate(self.cfs):
+            img = Image.open(cf.figure_path)
+            ax = axs[i // n_cols, i % n_cols]
+            ax.imshow(img)
+            ax.set_title(
+                f"{cf.model.name} - {cf.metrics['score']:.2f}", fontsize=10, pad=2
+            )
+            ax.axis("off")
+
+        # Hide unused axes
+        for i in range(len(self.cfs), n_cols * n_rows):
+            axs[i // n_cols, i % n_cols].axis("off")
+
+        fig.savefig(self.combined_figure_path, bbox_inches="tight", pad_inches=0.1)

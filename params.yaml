@@ -1,3 +1,179 @@
+circles_AdaBoostClassifier:
+  model:
+    _cls: src.Model
+    method: AdaBoostClassifier
+    name: AdaBoostClassifier
+    params:
+      random_state: 42
+circles_CreateDataset:
+  method: make_circles
+  params:
+    factor: 0.5
+    noise: 0.2
+    random_state: 0
+circles_DecisionTreeClassifier:
+  model:
+    _cls: src.Model
+    method: DecisionTreeClassifier
+    name: DecisionTreeClassifier
+    params:
+      max_depth: 5
+      random_state: 42
+circles_GaussianNB:
+  model:
+    _cls: src.Model
+    method: GaussianNB
+    name: GaussianNB
+    params: {}
+circles_GaussianProcessClassifier:
+  model:
+    _cls: src.Model
+    method: GaussianProcessClassifier
+    name: GaussianProcessClassifier
+    params:
+      random_state: 42
+circles_KNeighborsClassifier:
+  model:
+    _cls: src.Model
+    method: KNeighborsClassifier
+    name: KNeighborsClassifier
+    params:
+      n_neighbors: 3
+circles_Linear-SVM:
+  model:
+    _cls: src.Model
+    method: SVC
+    name: Linear-SVM
+    params:
+      C: 0.025
+      kernel: linear
+      random_state: 42
+circles_MLPClassifier:
+  model:
+    _cls: src.Model
+    method: MLPClassifier
+    name: MLPClassifier
+    params:
+      alpha: 1
+      max_iter: 1000
+      random_state: 42
+circles_QuadraticDiscriminantAnalysis:
+  model:
+    _cls: src.Model
+    method: QuadraticDiscriminantAnalysis
+    name: QuadraticDiscriminantAnalysis
+    params: {}
+circles_RBF-SVM:
+  model:
+    _cls: src.Model
+    method: SVC
+    name: RBF-SVM
+    params:
+      C: 1
+      gamma: 2
+      random_state: 42
+circles_RandomForestClassifier:
+  model:
+    _cls: src.Model
+    method: RandomForestClassifier
+    name: RandomForestClassifier
+    params:
+      max_depth: 5
+      max_features: 1
+      n_estimators: 10
+      random_state: 42
+circles_TrainTestSplit:
+  random_state: 42
+  test_size: 0.4
+linearly-separable_AdaBoostClassifier:
+  model:
+    _cls: src.Model
+    method: AdaBoostClassifier
+    name: AdaBoostClassifier
+    params:
+      random_state: 42
+linearly-separable_CreateDataset:
+  method: linearly_separable
+  params:
+    n_clusters_per_class: 1
+    n_features: 2
+    n_informative: 2
+    n_redundant: 0
+    random_state: 42
+linearly-separable_DecisionTreeClassifier:
+  model:
+    _cls: src.Model
+    method: DecisionTreeClassifier
+    name: DecisionTreeClassifier
+    params:
+      max_depth: 5
+      random_state: 42
+linearly-separable_GaussianNB:
+  model:
+    _cls: src.Model
+    method: GaussianNB
+    name: GaussianNB
+    params: {}
+linearly-separable_GaussianProcessClassifier:
+  model:
+    _cls: src.Model
+    method: GaussianProcessClassifier
+    name: GaussianProcessClassifier
+    params:
+      random_state: 42
+linearly-separable_KNeighborsClassifier:
+  model:
+    _cls: src.Model
+    method: KNeighborsClassifier
+    name: KNeighborsClassifier
+    params:
+      n_neighbors: 3
+linearly-separable_Linear-SVM:
+  model:
+    _cls: src.Model
+    method: SVC
+    name: Linear-SVM
+    params:
+      C: 0.025
+      kernel: linear
+      random_state: 42
+linearly-separable_MLPClassifier:
+  model:
+    _cls: src.Model
+    method: MLPClassifier
+    name: MLPClassifier
+    params:
+      alpha: 1
+      max_iter: 1000
+      random_state: 42
+linearly-separable_QuadraticDiscriminantAnalysis:
+  model:
+    _cls: src.Model
+    method: QuadraticDiscriminantAnalysis
+    name: QuadraticDiscriminantAnalysis
+    params: {}
+linearly-separable_RBF-SVM:
+  model:
+    _cls: src.Model
+    method: SVC
+    name: RBF-SVM
+    params:
+      C: 1
+      gamma: 2
+      random_state: 42
+linearly-separable_RandomForestClassifier:
+  model:
+    _cls: src.Model
+    method: RandomForestClassifier
+    name: RandomForestClassifier
+    params:
+      max_depth: 5
+      max_features: 1
+      n_estimators: 10
+      random_state: 42
+linearly-separable_TrainTestSplit:
+  random_state: 42
+  test_size: 0.4
 moons_AdaBoostClassifier:
   model:
     _cls: src.Model
@@ -38,11 +214,11 @@ moons_KNeighborsClassifier:
     name: KNeighborsClassifier
     params:
       n_neighbors: 3
-moons_Linear_SVM:
+moons_Linear-SVM:
   model:
     _cls: src.Model
     method: SVC
-    name: Linear_SVM
+    name: Linear-SVM
     params:
       C: 0.025
       kernel: linear
@@ -62,11 +238,11 @@ moons_QuadraticDiscriminantAnalysis:
     method: QuadraticDiscriminantAnalysis
     name: QuadraticDiscriminantAnalysis
     params: {}
-moons_RBF_SVM:
+moons_RBF-SVM:
   model:
     _cls: src.Model
     method: SVC
-    name: RBF_SVM
+    name: RBF-SVM
     params:
       C: 1
       gamma: 2

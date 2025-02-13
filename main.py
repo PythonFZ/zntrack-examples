@@ -2,7 +2,7 @@ import zntrack
 
 zntrack.config.ALWAYS_CACHE = True
 
-from src import CreateDataset, TrainTestSplit, Model, Classifier
+from src import Classifier, CombineFigures, CreateDataset, Model, TrainTestSplit
 
 project = zntrack.Project()
 
@@ -14,12 +14,12 @@ models = [
     Model(
         method="SVC",
         params={"kernel": "linear", "C": 0.025, "random_state": 42},
-        name="Linear_SVM",
+        name="Linear-SVM",
     ),
     Model(
         method="SVC",
         params={"gamma": 2, "C": 1, "random_state": 42},
-        name="RBF_SVM",
+        name="RBF-SVM",
     ),
     Model(
         method="GaussianProcessClassifier",
@@ -54,19 +54,44 @@ models = [
     ),
 ]
 
-with project.group("moons"):
-    ds = CreateDataset(method="make_moons", params={"noise": 0.3, "random_state": 0})
-    split = TrainTestSplit(x=ds.x, y=ds.y)
+config = {
+    "moons": {"method": "make_moons", "params": {"noise": 0.3, "random_state": 0}},
+    "circles": {
+        "method": "make_circles",
+        "params": {"noise": 0.2, "factor": 0.5, "random_state": 0},
+    },
+    "linearly-separable": {
+        "method": "linearly_separable",
+        "params": {
+            "n_features": 2,
+            "n_redundant": 0,
+            "n_informative": 2,
+            "random_state": 42,
+            "n_clusters_per_class": 1,
+        },
+    },
+}
 
-    for model in models:
-        c = Classifier(
-            model=model,
-            x=ds.x,
-            x_train=split.x_train,
-            y_train=split.y_train,
-            x_test=split.x_test,
-            y_test=split.y_test,
-            name=model.name,
-        )
+for name, params in config.items():
+    with project.group(name):
+        ds = CreateDataset(**params)
+        split = TrainTestSplit(x=ds.x, y=ds.y)
+
+        cfs = []
+
+        for model in models:
+            cfs.append(
+                Classifier(
+                    model=model,
+                    x=ds.x,
+                    x_train=split.x_train,
+                    y_train=split.y_train,
+                    x_test=split.x_test,
+                    y_test=split.y_test,
+                    name=model.name,
+                )
+            )
+
+        CombineFigures(cfs=cfs, always_changed=True)
 
 project.repro()

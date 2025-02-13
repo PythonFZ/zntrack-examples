@@ -147,10 +147,10 @@
             "value": "$nwd$/figure.png"
         }
     },
-    "moons_Linear_SVM": {
+    "moons_Linear-SVM": {
         "nwd": {
             "_type": "pathlib.Path",
-            "value": "nodes/moons/Linear_SVM"
+            "value": "nodes/moons/Linear-SVM"
         },
         "model": {
             "_type": "@dataclasses.dataclass",
@@ -249,10 +249,10 @@
             "value": "$nwd$/figure.png"
         }
     },
-    "moons_RBF_SVM": {
+    "moons_RBF-SVM": {
         "nwd": {
             "_type": "pathlib.Path",
-            "value": "nodes/moons/RBF_SVM"
+            "value": "nodes/moons/RBF-SVM"
         },
         "model": {
             "_type": "@dataclasses.dataclass",
@@ -1063,6 +1063,2684 @@
         "figure_path": {
             "_type": "pathlib.Path",
             "value": "$nwd$/figure.png"
+        }
+    },
+    "moons_CombineFigures": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/moons/CombineFigures"
+        },
+        "cfs": [
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "moons_KNeighborsClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "moons_Linear-SVM",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "moons_RBF-SVM",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "moons_GaussianProcessClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "moons_DecisionTreeClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "moons_RandomForestClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "moons_MLPClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "moons_AdaBoostClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "moons_GaussianNB",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "moons_QuadraticDiscriminantAnalysis",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            }
+        ],
+        "combined_figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/combined_figure.png"
+        }
+    },
+    "circles_CreateDataset": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/circles/CreateDataset"
+        }
+    },
+    "circles_TrainTestSplit": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/circles/TrainTestSplit"
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "y": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y",
+                "item": null
+            }
+        }
+    },
+    "circles_KNeighborsClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/circles/KNeighborsClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "circles_Linear-SVM": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/circles/Linear-SVM"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "circles_RBF-SVM": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/circles/RBF-SVM"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "circles_GaussianProcessClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/circles/GaussianProcessClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "circles_DecisionTreeClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/circles/DecisionTreeClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "circles_RandomForestClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/circles/RandomForestClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "circles_MLPClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/circles/MLPClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "circles_AdaBoostClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/circles/AdaBoostClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "circles_GaussianNB": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/circles/GaussianNB"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "circles_QuadraticDiscriminantAnalysis": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/circles/QuadraticDiscriminantAnalysis"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "circles_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "circles_CombineFigures": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/circles/CombineFigures"
+        },
+        "cfs": [
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "circles_KNeighborsClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "circles_Linear-SVM",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "circles_RBF-SVM",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "circles_GaussianProcessClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "circles_DecisionTreeClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "circles_RandomForestClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "circles_MLPClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "circles_AdaBoostClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "circles_GaussianNB",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "circles_QuadraticDiscriminantAnalysis",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            }
+        ],
+        "combined_figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/combined_figure.png"
+        }
+    },
+    "linearly-separable_CreateDataset": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linearly-separable/CreateDataset"
+        }
+    },
+    "linearly-separable_TrainTestSplit": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linearly-separable/TrainTestSplit"
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "y": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y",
+                "item": null
+            }
+        }
+    },
+    "linearly-separable_KNeighborsClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linearly-separable/KNeighborsClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "linearly-separable_Linear-SVM": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linearly-separable/Linear-SVM"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "linearly-separable_RBF-SVM": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linearly-separable/RBF-SVM"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "linearly-separable_GaussianProcessClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linearly-separable/GaussianProcessClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "linearly-separable_DecisionTreeClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linearly-separable/DecisionTreeClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "linearly-separable_RandomForestClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linearly-separable/RandomForestClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "linearly-separable_MLPClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linearly-separable/MLPClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "linearly-separable_AdaBoostClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linearly-separable/AdaBoostClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "linearly-separable_GaussianNB": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linearly-separable/GaussianNB"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "linearly-separable_QuadraticDiscriminantAnalysis": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linearly-separable/QuadraticDiscriminantAnalysis"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "linearly-separable_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "linearly-separable_CombineFigures": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/linearly-separable/CombineFigures"
+        },
+        "cfs": [
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "linearly-separable_KNeighborsClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "linearly-separable_Linear-SVM",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "linearly-separable_RBF-SVM",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "linearly-separable_GaussianProcessClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "linearly-separable_DecisionTreeClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "linearly-separable_RandomForestClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "linearly-separable_MLPClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "linearly-separable_AdaBoostClassifier",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "linearly-separable_GaussianNB",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            },
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "linearly-separable_QuadraticDiscriminantAnalysis",
+                            "cls": "Classifier",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": null,
+                    "item": null
+                }
+            }
+        ],
+        "combined_figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/combined_figure.png"
         }
     }
 }

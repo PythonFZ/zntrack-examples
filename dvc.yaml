@@ -1,4 +1,432 @@
 stages:
+  circles_AdaBoostClassifier:
+    cmd: zntrack run src.Classifier --name circles_AdaBoostClassifier
+    deps:
+    - nodes/circles/CreateDataset/x.json
+    - nodes/circles/TrainTestSplit/x_test.json
+    - nodes/circles/TrainTestSplit/x_train.json
+    - nodes/circles/TrainTestSplit/y_test.json
+    - nodes/circles/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/circles/AdaBoostClassifier/metrics.json
+    - nodes/circles/AdaBoostClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/circles/AdaBoostClassifier/figure.png
+    params:
+    - circles_AdaBoostClassifier
+  circles_CombineFigures:
+    always_changed: true
+    cmd: zntrack run src.CombineFigures --name circles_CombineFigures
+    deps:
+    - nodes/circles/AdaBoostClassifier/figure.png
+    - nodes/circles/AdaBoostClassifier/metrics.json
+    - nodes/circles/DecisionTreeClassifier/figure.png
+    - nodes/circles/DecisionTreeClassifier/metrics.json
+    - nodes/circles/GaussianNB/figure.png
+    - nodes/circles/GaussianNB/metrics.json
+    - nodes/circles/GaussianProcessClassifier/figure.png
+    - nodes/circles/GaussianProcessClassifier/metrics.json
+    - nodes/circles/KNeighborsClassifier/figure.png
+    - nodes/circles/KNeighborsClassifier/metrics.json
+    - nodes/circles/Linear-SVM/figure.png
+    - nodes/circles/Linear-SVM/metrics.json
+    - nodes/circles/MLPClassifier/figure.png
+    - nodes/circles/MLPClassifier/metrics.json
+    - nodes/circles/QuadraticDiscriminantAnalysis/figure.png
+    - nodes/circles/QuadraticDiscriminantAnalysis/metrics.json
+    - nodes/circles/RBF-SVM/figure.png
+    - nodes/circles/RBF-SVM/metrics.json
+    - nodes/circles/RandomForestClassifier/figure.png
+    - nodes/circles/RandomForestClassifier/metrics.json
+    metrics:
+    - nodes/circles/CombineFigures/node-meta.json:
+        cache: true
+    outs:
+    - nodes/circles/CombineFigures/combined_figure.png
+  circles_CreateDataset:
+    cmd: zntrack run src.CreateDataset --name circles_CreateDataset
+    metrics:
+    - nodes/circles/CreateDataset/node-meta.json:
+        cache: true
+    outs:
+    - nodes/circles/CreateDataset/x.json
+    - nodes/circles/CreateDataset/y.json
+    params:
+    - circles_CreateDataset
+  circles_DecisionTreeClassifier:
+    cmd: zntrack run src.Classifier --name circles_DecisionTreeClassifier
+    deps:
+    - nodes/circles/CreateDataset/x.json
+    - nodes/circles/TrainTestSplit/x_test.json
+    - nodes/circles/TrainTestSplit/x_train.json
+    - nodes/circles/TrainTestSplit/y_test.json
+    - nodes/circles/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/circles/DecisionTreeClassifier/metrics.json
+    - nodes/circles/DecisionTreeClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/circles/DecisionTreeClassifier/figure.png
+    params:
+    - circles_DecisionTreeClassifier
+  circles_GaussianNB:
+    cmd: zntrack run src.Classifier --name circles_GaussianNB
+    deps:
+    - nodes/circles/CreateDataset/x.json
+    - nodes/circles/TrainTestSplit/x_test.json
+    - nodes/circles/TrainTestSplit/x_train.json
+    - nodes/circles/TrainTestSplit/y_test.json
+    - nodes/circles/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/circles/GaussianNB/metrics.json
+    - nodes/circles/GaussianNB/node-meta.json:
+        cache: true
+    outs:
+    - nodes/circles/GaussianNB/figure.png
+    params:
+    - circles_GaussianNB
+  circles_GaussianProcessClassifier:
+    cmd: zntrack run src.Classifier --name circles_GaussianProcessClassifier
+    deps:
+    - nodes/circles/CreateDataset/x.json
+    - nodes/circles/TrainTestSplit/x_test.json
+    - nodes/circles/TrainTestSplit/x_train.json
+    - nodes/circles/TrainTestSplit/y_test.json
+    - nodes/circles/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/circles/GaussianProcessClassifier/metrics.json
+    - nodes/circles/GaussianProcessClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/circles/GaussianProcessClassifier/figure.png
+    params:
+    - circles_GaussianProcessClassifier
+  circles_KNeighborsClassifier:
+    cmd: zntrack run src.Classifier --name circles_KNeighborsClassifier
+    deps:
+    - nodes/circles/CreateDataset/x.json
+    - nodes/circles/TrainTestSplit/x_test.json
+    - nodes/circles/TrainTestSplit/x_train.json
+    - nodes/circles/TrainTestSplit/y_test.json
+    - nodes/circles/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/circles/KNeighborsClassifier/metrics.json
+    - nodes/circles/KNeighborsClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/circles/KNeighborsClassifier/figure.png
+    params:
+    - circles_KNeighborsClassifier
+  circles_Linear-SVM:
+    cmd: zntrack run src.Classifier --name circles_Linear-SVM
+    deps:
+    - nodes/circles/CreateDataset/x.json
+    - nodes/circles/TrainTestSplit/x_test.json
+    - nodes/circles/TrainTestSplit/x_train.json
+    - nodes/circles/TrainTestSplit/y_test.json
+    - nodes/circles/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/circles/Linear-SVM/metrics.json
+    - nodes/circles/Linear-SVM/node-meta.json:
+        cache: true
+    outs:
+    - nodes/circles/Linear-SVM/figure.png
+    params:
+    - circles_Linear-SVM
+  circles_MLPClassifier:
+    cmd: zntrack run src.Classifier --name circles_MLPClassifier
+    deps:
+    - nodes/circles/CreateDataset/x.json
+    - nodes/circles/TrainTestSplit/x_test.json
+    - nodes/circles/TrainTestSplit/x_train.json
+    - nodes/circles/TrainTestSplit/y_test.json
+    - nodes/circles/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/circles/MLPClassifier/metrics.json
+    - nodes/circles/MLPClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/circles/MLPClassifier/figure.png
+    params:
+    - circles_MLPClassifier
+  circles_QuadraticDiscriminantAnalysis:
+    cmd: zntrack run src.Classifier --name circles_QuadraticDiscriminantAnalysis
+    deps:
+    - nodes/circles/CreateDataset/x.json
+    - nodes/circles/TrainTestSplit/x_test.json
+    - nodes/circles/TrainTestSplit/x_train.json
+    - nodes/circles/TrainTestSplit/y_test.json
+    - nodes/circles/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/circles/QuadraticDiscriminantAnalysis/metrics.json
+    - nodes/circles/QuadraticDiscriminantAnalysis/node-meta.json:
+        cache: true
+    outs:
+    - nodes/circles/QuadraticDiscriminantAnalysis/figure.png
+    params:
+    - circles_QuadraticDiscriminantAnalysis
+  circles_RBF-SVM:
+    cmd: zntrack run src.Classifier --name circles_RBF-SVM
+    deps:
+    - nodes/circles/CreateDataset/x.json
+    - nodes/circles/TrainTestSplit/x_test.json
+    - nodes/circles/TrainTestSplit/x_train.json
+    - nodes/circles/TrainTestSplit/y_test.json
+    - nodes/circles/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/circles/RBF-SVM/metrics.json
+    - nodes/circles/RBF-SVM/node-meta.json:
+        cache: true
+    outs:
+    - nodes/circles/RBF-SVM/figure.png
+    params:
+    - circles_RBF-SVM
+  circles_RandomForestClassifier:
+    cmd: zntrack run src.Classifier --name circles_RandomForestClassifier
+    deps:
+    - nodes/circles/CreateDataset/x.json
+    - nodes/circles/TrainTestSplit/x_test.json
+    - nodes/circles/TrainTestSplit/x_train.json
+    - nodes/circles/TrainTestSplit/y_test.json
+    - nodes/circles/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/circles/RandomForestClassifier/metrics.json
+    - nodes/circles/RandomForestClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/circles/RandomForestClassifier/figure.png
+    params:
+    - circles_RandomForestClassifier
+  circles_TrainTestSplit:
+    cmd: zntrack run src.TrainTestSplit --name circles_TrainTestSplit
+    deps:
+    - nodes/circles/CreateDataset/x.json
+    - nodes/circles/CreateDataset/y.json
+    metrics:
+    - nodes/circles/TrainTestSplit/node-meta.json:
+        cache: true
+    outs:
+    - nodes/circles/TrainTestSplit/x_test.json
+    - nodes/circles/TrainTestSplit/x_train.json
+    - nodes/circles/TrainTestSplit/y_test.json
+    - nodes/circles/TrainTestSplit/y_train.json
+    params:
+    - circles_TrainTestSplit
+  linearly-separable_AdaBoostClassifier:
+    cmd: zntrack run src.Classifier --name linearly-separable_AdaBoostClassifier
+    deps:
+    - nodes/linearly-separable/CreateDataset/x.json
+    - nodes/linearly-separable/TrainTestSplit/x_test.json
+    - nodes/linearly-separable/TrainTestSplit/x_train.json
+    - nodes/linearly-separable/TrainTestSplit/y_test.json
+    - nodes/linearly-separable/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/linearly-separable/AdaBoostClassifier/metrics.json
+    - nodes/linearly-separable/AdaBoostClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/linearly-separable/AdaBoostClassifier/figure.png
+    params:
+    - linearly-separable_AdaBoostClassifier
+  linearly-separable_CombineFigures:
+    always_changed: true
+    cmd: zntrack run src.CombineFigures --name linearly-separable_CombineFigures
+    deps:
+    - nodes/linearly-separable/AdaBoostClassifier/figure.png
+    - nodes/linearly-separable/AdaBoostClassifier/metrics.json
+    - nodes/linearly-separable/DecisionTreeClassifier/figure.png
+    - nodes/linearly-separable/DecisionTreeClassifier/metrics.json
+    - nodes/linearly-separable/GaussianNB/figure.png
+    - nodes/linearly-separable/GaussianNB/metrics.json
+    - nodes/linearly-separable/GaussianProcessClassifier/figure.png
+    - nodes/linearly-separable/GaussianProcessClassifier/metrics.json
+    - nodes/linearly-separable/KNeighborsClassifier/figure.png
+    - nodes/linearly-separable/KNeighborsClassifier/metrics.json
+    - nodes/linearly-separable/Linear-SVM/figure.png
+    - nodes/linearly-separable/Linear-SVM/metrics.json
+    - nodes/linearly-separable/MLPClassifier/figure.png
+    - nodes/linearly-separable/MLPClassifier/metrics.json
+    - nodes/linearly-separable/QuadraticDiscriminantAnalysis/figure.png
+    - nodes/linearly-separable/QuadraticDiscriminantAnalysis/metrics.json
+    - nodes/linearly-separable/RBF-SVM/figure.png
+    - nodes/linearly-separable/RBF-SVM/metrics.json
+    - nodes/linearly-separable/RandomForestClassifier/figure.png
+    - nodes/linearly-separable/RandomForestClassifier/metrics.json
+    metrics:
+    - nodes/linearly-separable/CombineFigures/node-meta.json:
+        cache: true
+    outs:
+    - nodes/linearly-separable/CombineFigures/combined_figure.png
+  linearly-separable_CreateDataset:
+    cmd: zntrack run src.CreateDataset --name linearly-separable_CreateDataset
+    metrics:
+    - nodes/linearly-separable/CreateDataset/node-meta.json:
+        cache: true
+    outs:
+    - nodes/linearly-separable/CreateDataset/x.json
+    - nodes/linearly-separable/CreateDataset/y.json
+    params:
+    - linearly-separable_CreateDataset
+  linearly-separable_DecisionTreeClassifier:
+    cmd: zntrack run src.Classifier --name linearly-separable_DecisionTreeClassifier
+    deps:
+    - nodes/linearly-separable/CreateDataset/x.json
+    - nodes/linearly-separable/TrainTestSplit/x_test.json
+    - nodes/linearly-separable/TrainTestSplit/x_train.json
+    - nodes/linearly-separable/TrainTestSplit/y_test.json
+    - nodes/linearly-separable/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/linearly-separable/DecisionTreeClassifier/metrics.json
+    - nodes/linearly-separable/DecisionTreeClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/linearly-separable/DecisionTreeClassifier/figure.png
+    params:
+    - linearly-separable_DecisionTreeClassifier
+  linearly-separable_GaussianNB:
+    cmd: zntrack run src.Classifier --name linearly-separable_GaussianNB
+    deps:
+    - nodes/linearly-separable/CreateDataset/x.json
+    - nodes/linearly-separable/TrainTestSplit/x_test.json
+    - nodes/linearly-separable/TrainTestSplit/x_train.json
+    - nodes/linearly-separable/TrainTestSplit/y_test.json
+    - nodes/linearly-separable/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/linearly-separable/GaussianNB/metrics.json
+    - nodes/linearly-separable/GaussianNB/node-meta.json:
+        cache: true
+    outs:
+    - nodes/linearly-separable/GaussianNB/figure.png
+    params:
+    - linearly-separable_GaussianNB
+  linearly-separable_GaussianProcessClassifier:
+    cmd: zntrack run src.Classifier --name linearly-separable_GaussianProcessClassifier
+    deps:
+    - nodes/linearly-separable/CreateDataset/x.json
+    - nodes/linearly-separable/TrainTestSplit/x_test.json
+    - nodes/linearly-separable/TrainTestSplit/x_train.json
+    - nodes/linearly-separable/TrainTestSplit/y_test.json
+    - nodes/linearly-separable/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/linearly-separable/GaussianProcessClassifier/metrics.json
+    - nodes/linearly-separable/GaussianProcessClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/linearly-separable/GaussianProcessClassifier/figure.png
+    params:
+    - linearly-separable_GaussianProcessClassifier
+  linearly-separable_KNeighborsClassifier:
+    cmd: zntrack run src.Classifier --name linearly-separable_KNeighborsClassifier
+    deps:
+    - nodes/linearly-separable/CreateDataset/x.json
+    - nodes/linearly-separable/TrainTestSplit/x_test.json
+    - nodes/linearly-separable/TrainTestSplit/x_train.json
+    - nodes/linearly-separable/TrainTestSplit/y_test.json
+    - nodes/linearly-separable/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/linearly-separable/KNeighborsClassifier/metrics.json
+    - nodes/linearly-separable/KNeighborsClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/linearly-separable/KNeighborsClassifier/figure.png
+    params:
+    - linearly-separable_KNeighborsClassifier
+  linearly-separable_Linear-SVM:
+    cmd: zntrack run src.Classifier --name linearly-separable_Linear-SVM
+    deps:
+    - nodes/linearly-separable/CreateDataset/x.json
+    - nodes/linearly-separable/TrainTestSplit/x_test.json
+    - nodes/linearly-separable/TrainTestSplit/x_train.json
+    - nodes/linearly-separable/TrainTestSplit/y_test.json
+    - nodes/linearly-separable/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/linearly-separable/Linear-SVM/metrics.json
+    - nodes/linearly-separable/Linear-SVM/node-meta.json:
+        cache: true
+    outs:
+    - nodes/linearly-separable/Linear-SVM/figure.png
+    params:
+    - linearly-separable_Linear-SVM
+  linearly-separable_MLPClassifier:
+    cmd: zntrack run src.Classifier --name linearly-separable_MLPClassifier
+    deps:
+    - nodes/linearly-separable/CreateDataset/x.json
+    - nodes/linearly-separable/TrainTestSplit/x_test.json
+    - nodes/linearly-separable/TrainTestSplit/x_train.json
+    - nodes/linearly-separable/TrainTestSplit/y_test.json
+    - nodes/linearly-separable/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/linearly-separable/MLPClassifier/metrics.json
+    - nodes/linearly-separable/MLPClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/linearly-separable/MLPClassifier/figure.png
+    params:
+    - linearly-separable_MLPClassifier
+  linearly-separable_QuadraticDiscriminantAnalysis:
+    cmd: zntrack run src.Classifier --name linearly-separable_QuadraticDiscriminantAnalysis
+    deps:
+    - nodes/linearly-separable/CreateDataset/x.json
+    - nodes/linearly-separable/TrainTestSplit/x_test.json
+    - nodes/linearly-separable/TrainTestSplit/x_train.json
+    - nodes/linearly-separable/TrainTestSplit/y_test.json
+    - nodes/linearly-separable/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/linearly-separable/QuadraticDiscriminantAnalysis/metrics.json
+    - nodes/linearly-separable/QuadraticDiscriminantAnalysis/node-meta.json:
+        cache: true
+    outs:
+    - nodes/linearly-separable/QuadraticDiscriminantAnalysis/figure.png
+    params:
+    - linearly-separable_QuadraticDiscriminantAnalysis
+  linearly-separable_RBF-SVM:
+    cmd: zntrack run src.Classifier --name linearly-separable_RBF-SVM
+    deps:
+    - nodes/linearly-separable/CreateDataset/x.json
+    - nodes/linearly-separable/TrainTestSplit/x_test.json
+    - nodes/linearly-separable/TrainTestSplit/x_train.json
+    - nodes/linearly-separable/TrainTestSplit/y_test.json
+    - nodes/linearly-separable/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/linearly-separable/RBF-SVM/metrics.json
+    - nodes/linearly-separable/RBF-SVM/node-meta.json:
+        cache: true
+    outs:
+    - nodes/linearly-separable/RBF-SVM/figure.png
+    params:
+    - linearly-separable_RBF-SVM
+  linearly-separable_RandomForestClassifier:
+    cmd: zntrack run src.Classifier --name linearly-separable_RandomForestClassifier
+    deps:
+    - nodes/linearly-separable/CreateDataset/x.json
+    - nodes/linearly-separable/TrainTestSplit/x_test.json
+    - nodes/linearly-separable/TrainTestSplit/x_train.json
+    - nodes/linearly-separable/TrainTestSplit/y_test.json
+    - nodes/linearly-separable/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/linearly-separable/RandomForestClassifier/metrics.json
+    - nodes/linearly-separable/RandomForestClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/linearly-separable/RandomForestClassifier/figure.png
+    params:
+    - linearly-separable_RandomForestClassifier
+  linearly-separable_TrainTestSplit:
+    cmd: zntrack run src.TrainTestSplit --name linearly-separable_TrainTestSplit
+    deps:
+    - nodes/linearly-separable/CreateDataset/x.json
+    - nodes/linearly-separable/CreateDataset/y.json
+    metrics:
+    - nodes/linearly-separable/TrainTestSplit/node-meta.json:
+        cache: true
+    outs:
+    - nodes/linearly-separable/TrainTestSplit/x_test.json
+    - nodes/linearly-separable/TrainTestSplit/x_train.json
+    - nodes/linearly-separable/TrainTestSplit/y_test.json
+    - nodes/linearly-separable/TrainTestSplit/y_train.json
+    params:
+    - linearly-separable_TrainTestSplit
   moons_AdaBoostClassifier:
     cmd: zntrack run src.Classifier --name moons_AdaBoostClassifier
     deps:
@@ -15,6 +443,35 @@ stages:
     - nodes/moons/AdaBoostClassifier/figure.png
     params:
     - moons_AdaBoostClassifier
+  moons_CombineFigures:
+    always_changed: true
+    cmd: zntrack run src.CombineFigures --name moons_CombineFigures
+    deps:
+    - nodes/moons/AdaBoostClassifier/figure.png
+    - nodes/moons/AdaBoostClassifier/metrics.json
+    - nodes/moons/DecisionTreeClassifier/figure.png
+    - nodes/moons/DecisionTreeClassifier/metrics.json
+    - nodes/moons/GaussianNB/figure.png
+    - nodes/moons/GaussianNB/metrics.json
+    - nodes/moons/GaussianProcessClassifier/figure.png
+    - nodes/moons/GaussianProcessClassifier/metrics.json
+    - nodes/moons/KNeighborsClassifier/figure.png
+    - nodes/moons/KNeighborsClassifier/metrics.json
+    - nodes/moons/Linear-SVM/figure.png
+    - nodes/moons/Linear-SVM/metrics.json
+    - nodes/moons/MLPClassifier/figure.png
+    - nodes/moons/MLPClassifier/metrics.json
+    - nodes/moons/QuadraticDiscriminantAnalysis/figure.png
+    - nodes/moons/QuadraticDiscriminantAnalysis/metrics.json
+    - nodes/moons/RBF-SVM/figure.png
+    - nodes/moons/RBF-SVM/metrics.json
+    - nodes/moons/RandomForestClassifier/figure.png
+    - nodes/moons/RandomForestClassifier/metrics.json
+    metrics:
+    - nodes/moons/CombineFigures/node-meta.json:
+        cache: true
+    outs:
+    - nodes/moons/CombineFigures/combined_figure.png
   moons_CreateDataset:
     cmd: zntrack run src.CreateDataset --name moons_CreateDataset
     metrics:
@@ -89,8 +546,8 @@ stages:
     - nodes/moons/KNeighborsClassifier/figure.png
     params:
     - moons_KNeighborsClassifier
-  moons_Linear_SVM:
-    cmd: zntrack run src.Classifier --name moons_Linear_SVM
+  moons_Linear-SVM:
+    cmd: zntrack run src.Classifier --name moons_Linear-SVM
     deps:
     - nodes/moons/CreateDataset/x.json
     - nodes/moons/TrainTestSplit/x_test.json
@@ -98,13 +555,13 @@ stages:
     - nodes/moons/TrainTestSplit/y_test.json
     - nodes/moons/TrainTestSplit/y_train.json
     metrics:
-    - nodes/moons/Linear_SVM/metrics.json
-    - nodes/moons/Linear_SVM/node-meta.json:
+    - nodes/moons/Linear-SVM/metrics.json
+    - nodes/moons/Linear-SVM/node-meta.json:
         cache: true
     outs:
-    - nodes/moons/Linear_SVM/figure.png
+    - nodes/moons/Linear-SVM/figure.png
     params:
-    - moons_Linear_SVM
+    - moons_Linear-SVM
   moons_MLPClassifier:
     cmd: zntrack run src.Classifier --name moons_MLPClassifier
     deps:
@@ -137,8 +594,8 @@ stages:
     - nodes/moons/QuadraticDiscriminantAnalysis/figure.png
     params:
     - moons_QuadraticDiscriminantAnalysis
-  moons_RBF_SVM:
-    cmd: zntrack run src.Classifier --name moons_RBF_SVM
+  moons_RBF-SVM:
+    cmd: zntrack run src.Classifier --name moons_RBF-SVM
     deps:
     - nodes/moons/CreateDataset/x.json
     - nodes/moons/TrainTestSplit/x_test.json
@@ -146,13 +603,13 @@ stages:
     - nodes/moons/TrainTestSplit/y_test.json
     - nodes/moons/TrainTestSplit/y_train.json
     metrics:
-    - nodes/moons/RBF_SVM/metrics.json
-    - nodes/moons/RBF_SVM/node-meta.json:
+    - nodes/moons/RBF-SVM/metrics.json
+    - nodes/moons/RBF-SVM/node-meta.json:
         cache: true
     outs:
-    - nodes/moons/RBF_SVM/figure.png
+    - nodes/moons/RBF-SVM/figure.png
     params:
-    - moons_RBF_SVM
+    - moons_RBF-SVM
   moons_RandomForestClassifier:
     cmd: zntrack run src.Classifier --name moons_RandomForestClassifier
     deps:

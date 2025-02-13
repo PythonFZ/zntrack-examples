@@ -12,8 +12,8 @@ stages:
     outs:
     - path: nodes/moons/CreateDataset/node-meta.json
       hash: md5
-      md5: 19a336df64e032e75b07c20065cc85a2
-      size: 124
+      md5: 2da5d61f23f935eaae34348d20abb4ca
+      size: 123
     - path: nodes/moons/CreateDataset/x.json
       hash: md5
       md5: 949e56ac14207a80c5d218e2300c4d62
@@ -41,7 +41,7 @@ stages:
     outs:
     - path: nodes/moons/TrainTestSplit/node-meta.json
       hash: md5
-      md5: 6a3a8367d003e8966ab0de2bd6cb941b
+      md5: 89097d47eae3c6f13781e6d17e482caa
       size: 124
     - path: nodes/moons/TrainTestSplit/x_test.json
       hash: md5
@@ -94,15 +94,15 @@ stages:
     outs:
     - path: nodes/moons/AdaBoostClassifier/figure.png
       hash: md5
-      md5: dfcff5a3efd3594a16fc399eefc79ab9
-      size: 34038
+      md5: db67b83c856847cc3a87f260d484ba10
+      size: 32587
     - path: nodes/moons/AdaBoostClassifier/metrics.json
       hash: md5
       md5: 1a2dbefb56e640b6d6b28a66531c134a
       size: 16
     - path: nodes/moons/AdaBoostClassifier/node-meta.json
       hash: md5
-      md5: c9d4915b47406095e140add7bcef6645
+      md5: e3c2aa3e15873e330f840abdac529360
       size: 124
   moons_DecisionTreeClassifier:
     cmd: zntrack run src.Classifier --name moons_DecisionTreeClassifier
@@ -140,15 +140,15 @@ stages:
     outs:
     - path: nodes/moons/DecisionTreeClassifier/figure.png
       hash: md5
-      md5: 6989a3fd1da532e59e3f3913afcec714
-      size: 31767
+      md5: 90647b306896861ca7b57a640e4d20ef
+      size: 30383
     - path: nodes/moons/DecisionTreeClassifier/metrics.json
       hash: md5
       md5: 6fd40c49cbdfd2fba040ace1a51ef989
       size: 15
     - path: nodes/moons/DecisionTreeClassifier/node-meta.json
       hash: md5
-      md5: 596df097bd353bb83eb84161f1a0105f
+      md5: f06c51c9d58ea2159ebcde14d6e913e4
       size: 124
   moons_GaussianNB:
     cmd: zntrack run src.Classifier --name moons_GaussianNB
@@ -184,15 +184,15 @@ stages:
     outs:
     - path: nodes/moons/GaussianNB/figure.png
       hash: md5
-      md5: 29df7012b67a24cefabffd9d20be70ac
-      size: 35117
+      md5: 5030f3e6853bd646abc386fba2045a0d
+      size: 33893
     - path: nodes/moons/GaussianNB/metrics.json
       hash: md5
       md5: 6c3f908469aaaafce7071bfe061a87f1
       size: 16
     - path: nodes/moons/GaussianNB/node-meta.json
       hash: md5
-      md5: e3cd66706a175cc0439ba594d7f024f9
+      md5: 381791f0128ed6ca912066f52f8b1ed0
       size: 124
   moons_GaussianProcessClassifier:
     cmd: zntrack run src.Classifier --name moons_GaussianProcessClassifier
@@ -229,15 +229,15 @@ stages:
     outs:
     - path: nodes/moons/GaussianProcessClassifier/figure.png
       hash: md5
-      md5: 17a2e70f540955b89ebf00ac8ed4f52d
-      size: 40388
+      md5: 2dbfa0e8e271c0e02931d79c1c796080
+      size: 38807
     - path: nodes/moons/GaussianProcessClassifier/metrics.json
       hash: md5
       md5: 6fd40c49cbdfd2fba040ace1a51ef989
       size: 15
     - path: nodes/moons/GaussianProcessClassifier/node-meta.json
       hash: md5
-      md5: bc4e57ac814344e7a858a0f2c32da2e0
+      md5: f60a70b2b343c4315f34ad34ffcf9f53
       size: 124
   moons_KNeighborsClassifier:
     cmd: zntrack run src.Classifier --name moons_KNeighborsClassifier
@@ -274,16 +274,16 @@ stages:
     outs:
     - path: nodes/moons/KNeighborsClassifier/figure.png
       hash: md5
-      md5: be82795bea9804de6f6d091863247178
-      size: 37013
+      md5: 876efb17b4d2e1e9f202e6ade4c7ee3a
+      size: 35504
     - path: nodes/moons/KNeighborsClassifier/metrics.json
       hash: md5
       md5: 6fd40c49cbdfd2fba040ace1a51ef989
       size: 15
     - path: nodes/moons/KNeighborsClassifier/node-meta.json
       hash: md5
-      md5: 8312b57becfa7dd2d403f3269a531c56
-      size: 123
+      md5: 79eed30ec7f454593b828324504f06da
+      size: 124
   moons_Linear_SVM:
     cmd: zntrack run src.Classifier --name moons_Linear_SVM
     deps:
@@ -368,15 +368,15 @@ stages:
     outs:
     - path: nodes/moons/MLPClassifier/figure.png
       hash: md5
-      md5: 55ceb667f790dd4fdfe6156d093987e3
-      size: 35651
+      md5: 115fd4c789b1e6ae64baac72887cce05
+      size: 34434
     - path: nodes/moons/MLPClassifier/metrics.json
       hash: md5
       md5: 269575a5be5ceea10e00a09e4713ff3d
       size: 14
     - path: nodes/moons/MLPClassifier/node-meta.json
       hash: md5
-      md5: 91f6eb086b785b4fee84885abce8550f
+      md5: f7b8a247465f1aac988675ea086fd76a
       size: 124
   moons_QuadraticDiscriminantAnalysis:
     cmd: zntrack run src.Classifier --name moons_QuadraticDiscriminantAnalysis
@@ -412,15 +412,15 @@ stages:
     outs:
     - path: nodes/moons/QuadraticDiscriminantAnalysis/figure.png
       hash: md5
-      md5: 9d7467107ed919b6eacd96c8d1f32c38
-      size: 35532
+      md5: ab75dd17f7f8670960c0f7abbd7e757e
+      size: 34115
     - path: nodes/moons/QuadraticDiscriminantAnalysis/metrics.json
       hash: md5
       md5: 931f2bd577454670a0a3684e6217d72c
       size: 15
     - path: nodes/moons/QuadraticDiscriminantAnalysis/node-meta.json
       hash: md5
-      md5: 7b39f68120af89d93ecb0402f8f84ca7
+      md5: 698f999caacabda6fcb0166b2862639e
       size: 124
   moons_RBF_SVM:
     cmd: zntrack run src.Classifier --name moons_RBF_SVM
@@ -507,13 +507,1666 @@ stages:
     outs:
     - path: nodes/moons/RandomForestClassifier/figure.png
       hash: md5
-      md5: 2798a352f9873c5098419c69cfb94cd6
-      size: 33774
+      md5: 325f5ed856c6cc03dc34e755625ce32b
+      size: 32517
     - path: nodes/moons/RandomForestClassifier/metrics.json
       hash: md5
       md5: 6fd40c49cbdfd2fba040ace1a51ef989
       size: 15
     - path: nodes/moons/RandomForestClassifier/node-meta.json
       hash: md5
-      md5: 6e10c7108f12e60aaae870e24080efae
+      md5: 29d225046c150a382a040951cd9e56b0
       size: 124
+  circles_CreateDataset:
+    cmd: zntrack run src.CreateDataset --name circles_CreateDataset
+    params:
+      params.yaml:
+        circles_CreateDataset:
+          method: make_circles
+          params:
+            factor: 0.5
+            noise: 0.2
+            random_state: 0
+    outs:
+    - path: nodes/circles/CreateDataset/node-meta.json
+      hash: md5
+      md5: 0772ff9439e295bda163ed3579e7bb33
+      size: 124
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/CreateDataset/y.json
+      hash: md5
+      md5: 04932df476dafb4c7e435e1642ffb692
+      size: 1280
+  circles_TrainTestSplit:
+    cmd: zntrack run src.TrainTestSplit --name circles_TrainTestSplit
+    deps:
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/CreateDataset/y.json
+      hash: md5
+      md5: 04932df476dafb4c7e435e1642ffb692
+      size: 1280
+    params:
+      params.yaml:
+        circles_TrainTestSplit:
+          random_state: 42
+          test_size: 0.4
+    outs:
+    - path: nodes/circles/TrainTestSplit/node-meta.json
+      hash: md5
+      md5: 69df198cc513555f5334f866743d9dcf
+      size: 124
+    - path: nodes/circles/TrainTestSplit/x_test.json
+      hash: md5
+      md5: dbda865e8456b483e1d3d874671fb5c4
+      size: 1064
+    - path: nodes/circles/TrainTestSplit/x_train.json
+      hash: md5
+      md5: c4fb160b0323c9f88cddafd66f0cefc9
+      size: 1492
+    - path: nodes/circles/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/circles/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+  circles_AdaBoostClassifier:
+    cmd: zntrack run src.Classifier --name circles_AdaBoostClassifier
+    deps:
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/TrainTestSplit/x_test.json
+      hash: md5
+      md5: dbda865e8456b483e1d3d874671fb5c4
+      size: 1064
+    - path: nodes/circles/TrainTestSplit/x_train.json
+      hash: md5
+      md5: c4fb160b0323c9f88cddafd66f0cefc9
+      size: 1492
+    - path: nodes/circles/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/circles/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        circles_AdaBoostClassifier:
+          model:
+            _cls: src.Model
+            method: AdaBoostClassifier
+            name: AdaBoostClassifier
+            params:
+              random_state: 42
+    outs:
+    - path: nodes/circles/AdaBoostClassifier/figure.png
+      hash: md5
+      md5: 3e806003f22ad5c9e763d0589badecfa
+      size: 31576
+    - path: nodes/circles/AdaBoostClassifier/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/circles/AdaBoostClassifier/node-meta.json
+      hash: md5
+      md5: 5fbdebe0dbe774c36c46c0d3cb028e44
+      size: 124
+  circles_DecisionTreeClassifier:
+    cmd: zntrack run src.Classifier --name circles_DecisionTreeClassifier
+    deps:
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/TrainTestSplit/x_test.json
+      hash: md5
+      md5: dbda865e8456b483e1d3d874671fb5c4
+      size: 1064
+    - path: nodes/circles/TrainTestSplit/x_train.json
+      hash: md5
+      md5: c4fb160b0323c9f88cddafd66f0cefc9
+      size: 1492
+    - path: nodes/circles/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/circles/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        circles_DecisionTreeClassifier:
+          model:
+            _cls: src.Model
+            method: DecisionTreeClassifier
+            name: DecisionTreeClassifier
+            params:
+              max_depth: 5
+              random_state: 42
+    outs:
+    - path: nodes/circles/DecisionTreeClassifier/figure.png
+      hash: md5
+      md5: 675e9581d4031b5132df7265ff5ade7d
+      size: 30234
+    - path: nodes/circles/DecisionTreeClassifier/metrics.json
+      hash: md5
+      md5: b29a73d8df91f5e9e3d7d8a9bbd02a22
+      size: 16
+    - path: nodes/circles/DecisionTreeClassifier/node-meta.json
+      hash: md5
+      md5: b801370dd7a894f6e91d27ac95e5c3a2
+      size: 124
+  circles_GaussianNB:
+    cmd: zntrack run src.Classifier --name circles_GaussianNB
+    deps:
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/TrainTestSplit/x_test.json
+      hash: md5
+      md5: dbda865e8456b483e1d3d874671fb5c4
+      size: 1064
+    - path: nodes/circles/TrainTestSplit/x_train.json
+      hash: md5
+      md5: c4fb160b0323c9f88cddafd66f0cefc9
+      size: 1492
+    - path: nodes/circles/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/circles/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        circles_GaussianNB:
+          model:
+            _cls: src.Model
+            method: GaussianNB
+            name: GaussianNB
+            params: {}
+    outs:
+    - path: nodes/circles/GaussianNB/figure.png
+      hash: md5
+      md5: 99b7f2766de998e7dcd3f2f6969a5970
+      size: 36128
+    - path: nodes/circles/GaussianNB/metrics.json
+      hash: md5
+      md5: 9bca84926f1c743137c84ac502c7f80d
+      size: 14
+    - path: nodes/circles/GaussianNB/node-meta.json
+      hash: md5
+      md5: 0628cebe129ea96061935c8937758c05
+      size: 124
+  circles_GaussianProcessClassifier:
+    cmd: zntrack run src.Classifier --name circles_GaussianProcessClassifier
+    deps:
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/TrainTestSplit/x_test.json
+      hash: md5
+      md5: dbda865e8456b483e1d3d874671fb5c4
+      size: 1064
+    - path: nodes/circles/TrainTestSplit/x_train.json
+      hash: md5
+      md5: c4fb160b0323c9f88cddafd66f0cefc9
+      size: 1492
+    - path: nodes/circles/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/circles/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        circles_GaussianProcessClassifier:
+          model:
+            _cls: src.Model
+            method: GaussianProcessClassifier
+            name: GaussianProcessClassifier
+            params:
+              random_state: 42
+    outs:
+    - path: nodes/circles/GaussianProcessClassifier/figure.png
+      hash: md5
+      md5: 94484198a3770d797f012951a78068e6
+      size: 38100
+    - path: nodes/circles/GaussianProcessClassifier/metrics.json
+      hash: md5
+      md5: 6c3f908469aaaafce7071bfe061a87f1
+      size: 16
+    - path: nodes/circles/GaussianProcessClassifier/node-meta.json
+      hash: md5
+      md5: dff4cd852b7c10668b5c0151b0ed275c
+      size: 124
+  circles_KNeighborsClassifier:
+    cmd: zntrack run src.Classifier --name circles_KNeighborsClassifier
+    deps:
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/TrainTestSplit/x_test.json
+      hash: md5
+      md5: dbda865e8456b483e1d3d874671fb5c4
+      size: 1064
+    - path: nodes/circles/TrainTestSplit/x_train.json
+      hash: md5
+      md5: c4fb160b0323c9f88cddafd66f0cefc9
+      size: 1492
+    - path: nodes/circles/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/circles/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        circles_KNeighborsClassifier:
+          model:
+            _cls: src.Model
+            method: KNeighborsClassifier
+            name: KNeighborsClassifier
+            params:
+              n_neighbors: 3
+    outs:
+    - path: nodes/circles/KNeighborsClassifier/figure.png
+      hash: md5
+      md5: 9380368310767834c755d4629601bbc2
+      size: 36559
+    - path: nodes/circles/KNeighborsClassifier/metrics.json
+      hash: md5
+      md5: 931f2bd577454670a0a3684e6217d72c
+      size: 15
+    - path: nodes/circles/KNeighborsClassifier/node-meta.json
+      hash: md5
+      md5: ac5d1699a9bfb254dd24819bd54871f4
+      size: 124
+  circles_Linear_SVM:
+    cmd: zntrack run src.Classifier --name circles_Linear_SVM
+    deps:
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/TrainTestSplit/x_test.json
+      hash: md5
+      md5: dbda865e8456b483e1d3d874671fb5c4
+      size: 1064
+    - path: nodes/circles/TrainTestSplit/x_train.json
+      hash: md5
+      md5: c4fb160b0323c9f88cddafd66f0cefc9
+      size: 1492
+    - path: nodes/circles/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/circles/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        circles_Linear_SVM:
+          model:
+            _cls: src.Model
+            method: SVC
+            name: Linear_SVM
+            params:
+              C: 0.025
+              kernel: linear
+              random_state: 42
+    outs:
+    - path: nodes/circles/Linear_SVM/figure.png
+      hash: md5
+      md5: 2dc55fa83f21f4518fb8667b3574c0c9
+      size: 36555
+    - path: nodes/circles/Linear_SVM/metrics.json
+      hash: md5
+      md5: fc39c2c19b0915d3fbae3482c35fb387
+      size: 16
+    - path: nodes/circles/Linear_SVM/node-meta.json
+      hash: md5
+      md5: b604b89864065dc0d377bf68a22d7ac4
+      size: 124
+  circles_MLPClassifier:
+    cmd: zntrack run src.Classifier --name circles_MLPClassifier
+    deps:
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/TrainTestSplit/x_test.json
+      hash: md5
+      md5: dbda865e8456b483e1d3d874671fb5c4
+      size: 1064
+    - path: nodes/circles/TrainTestSplit/x_train.json
+      hash: md5
+      md5: c4fb160b0323c9f88cddafd66f0cefc9
+      size: 1492
+    - path: nodes/circles/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/circles/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        circles_MLPClassifier:
+          model:
+            _cls: src.Model
+            method: MLPClassifier
+            name: MLPClassifier
+            params:
+              alpha: 1
+              max_iter: 1000
+              random_state: 42
+    outs:
+    - path: nodes/circles/MLPClassifier/figure.png
+      hash: md5
+      md5: f205549c74ea1d45987203afb7a4d9b5
+      size: 35059
+    - path: nodes/circles/MLPClassifier/metrics.json
+      hash: md5
+      md5: eb6105cb6e063541e78084261c806988
+      size: 16
+    - path: nodes/circles/MLPClassifier/node-meta.json
+      hash: md5
+      md5: 347263762723f1e6b46593fd3dd8948f
+      size: 124
+  circles_QuadraticDiscriminantAnalysis:
+    cmd: zntrack run src.Classifier --name circles_QuadraticDiscriminantAnalysis
+    deps:
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/TrainTestSplit/x_test.json
+      hash: md5
+      md5: dbda865e8456b483e1d3d874671fb5c4
+      size: 1064
+    - path: nodes/circles/TrainTestSplit/x_train.json
+      hash: md5
+      md5: c4fb160b0323c9f88cddafd66f0cefc9
+      size: 1492
+    - path: nodes/circles/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/circles/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        circles_QuadraticDiscriminantAnalysis:
+          model:
+            _cls: src.Model
+            method: QuadraticDiscriminantAnalysis
+            name: QuadraticDiscriminantAnalysis
+            params: {}
+    outs:
+    - path: nodes/circles/QuadraticDiscriminantAnalysis/figure.png
+      hash: md5
+      md5: 21b75d0a497c1b13ff630982a043a0b4
+      size: 35523
+    - path: nodes/circles/QuadraticDiscriminantAnalysis/metrics.json
+      hash: md5
+      md5: 6935e6ce91ebfb70969e99b273fcd3ab
+      size: 16
+    - path: nodes/circles/QuadraticDiscriminantAnalysis/node-meta.json
+      hash: md5
+      md5: 13a24a828fc81cbb4320b8caa8663754
+      size: 122
+  circles_RBF_SVM:
+    cmd: zntrack run src.Classifier --name circles_RBF_SVM
+    deps:
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/TrainTestSplit/x_test.json
+      hash: md5
+      md5: dbda865e8456b483e1d3d874671fb5c4
+      size: 1064
+    - path: nodes/circles/TrainTestSplit/x_train.json
+      hash: md5
+      md5: c4fb160b0323c9f88cddafd66f0cefc9
+      size: 1492
+    - path: nodes/circles/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/circles/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        circles_RBF_SVM:
+          model:
+            _cls: src.Model
+            method: SVC
+            name: RBF_SVM
+            params:
+              C: 1
+              gamma: 2
+              random_state: 42
+    outs:
+    - path: nodes/circles/RBF_SVM/figure.png
+      hash: md5
+      md5: 6be97db0c7b4a058ef2579b29faeb2e0
+      size: 37869
+    - path: nodes/circles/RBF_SVM/metrics.json
+      hash: md5
+      md5: 931f2bd577454670a0a3684e6217d72c
+      size: 15
+    - path: nodes/circles/RBF_SVM/node-meta.json
+      hash: md5
+      md5: 8d2e27a1a3b6457ae8e94712681b776f
+      size: 124
+  circles_RandomForestClassifier:
+    cmd: zntrack run src.Classifier --name circles_RandomForestClassifier
+    deps:
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/TrainTestSplit/x_test.json
+      hash: md5
+      md5: dbda865e8456b483e1d3d874671fb5c4
+      size: 1064
+    - path: nodes/circles/TrainTestSplit/x_train.json
+      hash: md5
+      md5: c4fb160b0323c9f88cddafd66f0cefc9
+      size: 1492
+    - path: nodes/circles/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/circles/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        circles_RandomForestClassifier:
+          model:
+            _cls: src.Model
+            method: RandomForestClassifier
+            name: RandomForestClassifier
+            params:
+              max_depth: 5
+              max_features: 1
+              n_estimators: 10
+              random_state: 42
+    outs:
+    - path: nodes/circles/RandomForestClassifier/figure.png
+      hash: md5
+      md5: 4363d4f4277446aba12128136598f722
+      size: 33352
+    - path: nodes/circles/RandomForestClassifier/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/circles/RandomForestClassifier/node-meta.json
+      hash: md5
+      md5: 7fd450f5a72bc94802bd53082ac03fbf
+      size: 124
+  linearly_separable_CreateDataset:
+    cmd: zntrack run src.CreateDataset --name linearly_separable_CreateDataset
+    params:
+      params.yaml:
+        linearly_separable_CreateDataset:
+          method: linearly_separable
+          params: {}
+    outs:
+    - path: nodes/linearly_separable/CreateDataset/node-meta.json
+      hash: md5
+      md5: 7a1b66316514326433e22d81ac544528
+      size: 124
+    - path: nodes/linearly_separable/CreateDataset/x.json
+      hash: md5
+      md5: b71b6cb81140351187e67343eadc5edd
+      size: 21544
+    - path: nodes/linearly_separable/CreateDataset/y.json
+      hash: md5
+      md5: dd51257859c62a5b9943fe9d4997cd9b
+      size: 1280
+  linearly_separable_TrainTestSplit:
+    cmd: zntrack run src.TrainTestSplit --name linearly_separable_TrainTestSplit
+    deps:
+    - path: nodes/linearly_separable/CreateDataset/x.json
+      hash: md5
+      md5: b71b6cb81140351187e67343eadc5edd
+      size: 21544
+    - path: nodes/linearly_separable/CreateDataset/y.json
+      hash: md5
+      md5: dd51257859c62a5b9943fe9d4997cd9b
+      size: 1280
+    params:
+      params.yaml:
+        linearly_separable_TrainTestSplit:
+          random_state: 42
+          test_size: 0.4
+    outs:
+    - path: nodes/linearly_separable/TrainTestSplit/node-meta.json
+      hash: md5
+      md5: 0398f1bb6aedc931a947e4cac5e6d6cd
+      size: 124
+    - path: nodes/linearly_separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: 36f32ad4fa8f31b1a3ed38dbd7ad7758
+      size: 8744
+    - path: nodes/linearly_separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 9184b97c0dd4963bdb603165021e344e
+      size: 13012
+    - path: nodes/linearly_separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ba761fa745a4776c86725ad7150d59e1
+      size: 640
+    - path: nodes/linearly_separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: a090c43faa735f13db4c7d345ef57f7d
+      size: 852
+  linearly-separable_CreateDataset:
+    cmd: zntrack run src.CreateDataset --name linearly-separable_CreateDataset
+    params:
+      params.yaml:
+        linearly-separable_CreateDataset:
+          method: linearly_separable
+          params:
+            n_clusters_per_class: 1
+            n_features: 2
+            n_informative: 2
+            n_redundant: 0
+            random_state: 42
+    outs:
+    - path: nodes/linearly-separable/CreateDataset/node-meta.json
+      hash: md5
+      md5: c39f33e33808ec354b05952c3920d1ab
+      size: 124
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/CreateDataset/y.json
+      hash: md5
+      md5: 7a5a3fce70897db93edad701a264ee4f
+      size: 1280
+  linearly-separable_TrainTestSplit:
+    cmd: zntrack run src.TrainTestSplit --name linearly-separable_TrainTestSplit
+    deps:
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/CreateDataset/y.json
+      hash: md5
+      md5: 7a5a3fce70897db93edad701a264ee4f
+      size: 1280
+    params:
+      params.yaml:
+        linearly-separable_TrainTestSplit:
+          random_state: 42
+          test_size: 0.4
+    outs:
+    - path: nodes/linearly-separable/TrainTestSplit/node-meta.json
+      hash: md5
+      md5: ef067d94882ceaab27bc7f99c7b47a18
+      size: 124
+    - path: nodes/linearly-separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: a120bf0dd0c550f7684319f742faa56c
+      size: 1064
+    - path: nodes/linearly-separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: fbd2eaa752f2882be03715d203ab3b4d
+      size: 1492
+    - path: nodes/linearly-separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ab040fd06576f572f7959d778daa5b78
+      size: 640
+    - path: nodes/linearly-separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: 0c0376d96caa4a32713d821b6ea18869
+      size: 852
+  linearly-separable_AdaBoostClassifier:
+    cmd: zntrack run src.Classifier --name linearly-separable_AdaBoostClassifier
+    deps:
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: a120bf0dd0c550f7684319f742faa56c
+      size: 1064
+    - path: nodes/linearly-separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: fbd2eaa752f2882be03715d203ab3b4d
+      size: 1492
+    - path: nodes/linearly-separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ab040fd06576f572f7959d778daa5b78
+      size: 640
+    - path: nodes/linearly-separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: 0c0376d96caa4a32713d821b6ea18869
+      size: 852
+    params:
+      params.yaml:
+        linearly-separable_AdaBoostClassifier:
+          model:
+            _cls: src.Model
+            method: AdaBoostClassifier
+            name: AdaBoostClassifier
+            params:
+              random_state: 42
+    outs:
+    - path: nodes/linearly-separable/AdaBoostClassifier/figure.png
+      hash: md5
+      md5: 1e3ab1dc2b05a8686d0fa577cf6cb966
+      size: 30752
+    - path: nodes/linearly-separable/AdaBoostClassifier/metrics.json
+      hash: md5
+      md5: 931f2bd577454670a0a3684e6217d72c
+      size: 15
+    - path: nodes/linearly-separable/AdaBoostClassifier/node-meta.json
+      hash: md5
+      md5: 6195ee635fefcc565dfe7ab89986f525
+      size: 124
+  linearly-separable_DecisionTreeClassifier:
+    cmd: zntrack run src.Classifier --name linearly-separable_DecisionTreeClassifier
+    deps:
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: a120bf0dd0c550f7684319f742faa56c
+      size: 1064
+    - path: nodes/linearly-separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: fbd2eaa752f2882be03715d203ab3b4d
+      size: 1492
+    - path: nodes/linearly-separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ab040fd06576f572f7959d778daa5b78
+      size: 640
+    - path: nodes/linearly-separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: 0c0376d96caa4a32713d821b6ea18869
+      size: 852
+    params:
+      params.yaml:
+        linearly-separable_DecisionTreeClassifier:
+          model:
+            _cls: src.Model
+            method: DecisionTreeClassifier
+            name: DecisionTreeClassifier
+            params:
+              max_depth: 5
+              random_state: 42
+    outs:
+    - path: nodes/linearly-separable/DecisionTreeClassifier/figure.png
+      hash: md5
+      md5: 052979f527df86bc706a3bc903a3d4ea
+      size: 29049
+    - path: nodes/linearly-separable/DecisionTreeClassifier/metrics.json
+      hash: md5
+      md5: 6c3f908469aaaafce7071bfe061a87f1
+      size: 16
+    - path: nodes/linearly-separable/DecisionTreeClassifier/node-meta.json
+      hash: md5
+      md5: b783f164f3139d6ed4d11df2123025a4
+      size: 124
+  linearly-separable_GaussianNB:
+    cmd: zntrack run src.Classifier --name linearly-separable_GaussianNB
+    deps:
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: a120bf0dd0c550f7684319f742faa56c
+      size: 1064
+    - path: nodes/linearly-separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: fbd2eaa752f2882be03715d203ab3b4d
+      size: 1492
+    - path: nodes/linearly-separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ab040fd06576f572f7959d778daa5b78
+      size: 640
+    - path: nodes/linearly-separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: 0c0376d96caa4a32713d821b6ea18869
+      size: 852
+    params:
+      params.yaml:
+        linearly-separable_GaussianNB:
+          model:
+            _cls: src.Model
+            method: GaussianNB
+            name: GaussianNB
+            params: {}
+    outs:
+    - path: nodes/linearly-separable/GaussianNB/figure.png
+      hash: md5
+      md5: 463f5e1b8b0d15f7c7a6a8c5ec7f8fab
+      size: 31215
+    - path: nodes/linearly-separable/GaussianNB/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/linearly-separable/GaussianNB/node-meta.json
+      hash: md5
+      md5: 2f9204f3899b38ad2226b9f45d6f7d7a
+      size: 124
+  linearly-separable_KNeighborsClassifier:
+    cmd: zntrack run src.Classifier --name linearly-separable_KNeighborsClassifier
+    deps:
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: a120bf0dd0c550f7684319f742faa56c
+      size: 1064
+    - path: nodes/linearly-separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: fbd2eaa752f2882be03715d203ab3b4d
+      size: 1492
+    - path: nodes/linearly-separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ab040fd06576f572f7959d778daa5b78
+      size: 640
+    - path: nodes/linearly-separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: 0c0376d96caa4a32713d821b6ea18869
+      size: 852
+    params:
+      params.yaml:
+        linearly-separable_KNeighborsClassifier:
+          model:
+            _cls: src.Model
+            method: KNeighborsClassifier
+            name: KNeighborsClassifier
+            params:
+              n_neighbors: 3
+    outs:
+    - path: nodes/linearly-separable/KNeighborsClassifier/figure.png
+      hash: md5
+      md5: 8bedd283757795b80122e6d1bae7c48c
+      size: 32399
+    - path: nodes/linearly-separable/KNeighborsClassifier/metrics.json
+      hash: md5
+      md5: 269575a5be5ceea10e00a09e4713ff3d
+      size: 14
+    - path: nodes/linearly-separable/KNeighborsClassifier/node-meta.json
+      hash: md5
+      md5: 995b99f09249887e21a267bb013772d0
+      size: 124
+  linearly-separable_GaussianProcessClassifier:
+    cmd: zntrack run src.Classifier --name linearly-separable_GaussianProcessClassifier
+    deps:
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: a120bf0dd0c550f7684319f742faa56c
+      size: 1064
+    - path: nodes/linearly-separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: fbd2eaa752f2882be03715d203ab3b4d
+      size: 1492
+    - path: nodes/linearly-separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ab040fd06576f572f7959d778daa5b78
+      size: 640
+    - path: nodes/linearly-separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: 0c0376d96caa4a32713d821b6ea18869
+      size: 852
+    params:
+      params.yaml:
+        linearly-separable_GaussianProcessClassifier:
+          model:
+            _cls: src.Model
+            method: GaussianProcessClassifier
+            name: GaussianProcessClassifier
+            params:
+              random_state: 42
+    outs:
+    - path: nodes/linearly-separable/GaussianProcessClassifier/figure.png
+      hash: md5
+      md5: db332ab70a7b93bc82216ca1d53a39b0
+      size: 32270
+    - path: nodes/linearly-separable/GaussianProcessClassifier/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/linearly-separable/GaussianProcessClassifier/node-meta.json
+      hash: md5
+      md5: f04b78839c1c6d3e450811b65742e8d0
+      size: 124
+  linearly-separable_Linear_SVM:
+    cmd: zntrack run src.Classifier --name linearly-separable_Linear_SVM
+    deps:
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: a120bf0dd0c550f7684319f742faa56c
+      size: 1064
+    - path: nodes/linearly-separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: fbd2eaa752f2882be03715d203ab3b4d
+      size: 1492
+    - path: nodes/linearly-separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ab040fd06576f572f7959d778daa5b78
+      size: 640
+    - path: nodes/linearly-separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: 0c0376d96caa4a32713d821b6ea18869
+      size: 852
+    params:
+      params.yaml:
+        linearly-separable_Linear_SVM:
+          model:
+            _cls: src.Model
+            method: SVC
+            name: Linear_SVM
+            params:
+              C: 0.025
+              kernel: linear
+              random_state: 42
+    outs:
+    - path: nodes/linearly-separable/Linear_SVM/figure.png
+      hash: md5
+      md5: c3a31c7b7d8ea18ee751fd12c3d58249
+      size: 33325
+    - path: nodes/linearly-separable/Linear_SVM/metrics.json
+      hash: md5
+      md5: 6fd40c49cbdfd2fba040ace1a51ef989
+      size: 15
+    - path: nodes/linearly-separable/Linear_SVM/node-meta.json
+      hash: md5
+      md5: 1e6f83c0f05d6c2658535e8edee63ee5
+      size: 124
+  linearly-separable_MLPClassifier:
+    cmd: zntrack run src.Classifier --name linearly-separable_MLPClassifier
+    deps:
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: a120bf0dd0c550f7684319f742faa56c
+      size: 1064
+    - path: nodes/linearly-separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: fbd2eaa752f2882be03715d203ab3b4d
+      size: 1492
+    - path: nodes/linearly-separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ab040fd06576f572f7959d778daa5b78
+      size: 640
+    - path: nodes/linearly-separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: 0c0376d96caa4a32713d821b6ea18869
+      size: 852
+    params:
+      params.yaml:
+        linearly-separable_MLPClassifier:
+          model:
+            _cls: src.Model
+            method: MLPClassifier
+            name: MLPClassifier
+            params:
+              alpha: 1
+              max_iter: 1000
+              random_state: 42
+    outs:
+    - path: nodes/linearly-separable/MLPClassifier/figure.png
+      hash: md5
+      md5: 39b0233ed78e82dbdaeb132eb356c1ce
+      size: 31711
+    - path: nodes/linearly-separable/MLPClassifier/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/linearly-separable/MLPClassifier/node-meta.json
+      hash: md5
+      md5: 39d1edb8f3ccb4f7ad0d66e32c02bc91
+      size: 123
+  linearly-separable_QuadraticDiscriminantAnalysis:
+    cmd: zntrack run src.Classifier --name linearly-separable_QuadraticDiscriminantAnalysis
+    deps:
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: a120bf0dd0c550f7684319f742faa56c
+      size: 1064
+    - path: nodes/linearly-separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: fbd2eaa752f2882be03715d203ab3b4d
+      size: 1492
+    - path: nodes/linearly-separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ab040fd06576f572f7959d778daa5b78
+      size: 640
+    - path: nodes/linearly-separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: 0c0376d96caa4a32713d821b6ea18869
+      size: 852
+    params:
+      params.yaml:
+        linearly-separable_QuadraticDiscriminantAnalysis:
+          model:
+            _cls: src.Model
+            method: QuadraticDiscriminantAnalysis
+            name: QuadraticDiscriminantAnalysis
+            params: {}
+    outs:
+    - path: nodes/linearly-separable/QuadraticDiscriminantAnalysis/figure.png
+      hash: md5
+      md5: 52983c7e4d0a27be7ac8d13685d37aaf
+      size: 33754
+    - path: nodes/linearly-separable/QuadraticDiscriminantAnalysis/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/linearly-separable/QuadraticDiscriminantAnalysis/node-meta.json
+      hash: md5
+      md5: b26c96bda723ab6fcae83c23ab3cc765
+      size: 124
+  linearly-separable_RBF_SVM:
+    cmd: zntrack run src.Classifier --name linearly-separable_RBF_SVM
+    deps:
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: a120bf0dd0c550f7684319f742faa56c
+      size: 1064
+    - path: nodes/linearly-separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: fbd2eaa752f2882be03715d203ab3b4d
+      size: 1492
+    - path: nodes/linearly-separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ab040fd06576f572f7959d778daa5b78
+      size: 640
+    - path: nodes/linearly-separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: 0c0376d96caa4a32713d821b6ea18869
+      size: 852
+    params:
+      params.yaml:
+        linearly-separable_RBF_SVM:
+          model:
+            _cls: src.Model
+            method: SVC
+            name: RBF_SVM
+            params:
+              C: 1
+              gamma: 2
+              random_state: 42
+    outs:
+    - path: nodes/linearly-separable/RBF_SVM/figure.png
+      hash: md5
+      md5: 014a8cd4f545e336e9584bd33eb32502
+      size: 38164
+    - path: nodes/linearly-separable/RBF_SVM/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/linearly-separable/RBF_SVM/node-meta.json
+      hash: md5
+      md5: 98d8e25269b86970432607f466fd3894
+      size: 124
+  linearly-separable_RandomForestClassifier:
+    cmd: zntrack run src.Classifier --name linearly-separable_RandomForestClassifier
+    deps:
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: a120bf0dd0c550f7684319f742faa56c
+      size: 1064
+    - path: nodes/linearly-separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: fbd2eaa752f2882be03715d203ab3b4d
+      size: 1492
+    - path: nodes/linearly-separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ab040fd06576f572f7959d778daa5b78
+      size: 640
+    - path: nodes/linearly-separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: 0c0376d96caa4a32713d821b6ea18869
+      size: 852
+    params:
+      params.yaml:
+        linearly-separable_RandomForestClassifier:
+          model:
+            _cls: src.Model
+            method: RandomForestClassifier
+            name: RandomForestClassifier
+            params:
+              max_depth: 5
+              max_features: 1
+              n_estimators: 10
+              random_state: 42
+    outs:
+    - path: nodes/linearly-separable/RandomForestClassifier/figure.png
+      hash: md5
+      md5: 7351efef049a04aabce158283530777d
+      size: 31585
+    - path: nodes/linearly-separable/RandomForestClassifier/metrics.json
+      hash: md5
+      md5: 6c3f908469aaaafce7071bfe061a87f1
+      size: 16
+    - path: nodes/linearly-separable/RandomForestClassifier/node-meta.json
+      hash: md5
+      md5: 729df021f203fce8d7c5396acb08b48a
+      size: 124
+  circles_RBF-SVM:
+    cmd: zntrack run src.Classifier --name circles_RBF-SVM
+    deps:
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/TrainTestSplit/x_test.json
+      hash: md5
+      md5: dbda865e8456b483e1d3d874671fb5c4
+      size: 1064
+    - path: nodes/circles/TrainTestSplit/x_train.json
+      hash: md5
+      md5: c4fb160b0323c9f88cddafd66f0cefc9
+      size: 1492
+    - path: nodes/circles/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/circles/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        circles_RBF-SVM:
+          model:
+            _cls: src.Model
+            method: SVC
+            name: RBF-SVM
+            params:
+              C: 1
+              gamma: 2
+              random_state: 42
+    outs:
+    - path: nodes/circles/RBF-SVM/figure.png
+      hash: md5
+      md5: ea0aa34fc06aa6f979a2aacce500f700
+      size: 36861
+    - path: nodes/circles/RBF-SVM/metrics.json
+      hash: md5
+      md5: 931f2bd577454670a0a3684e6217d72c
+      size: 15
+    - path: nodes/circles/RBF-SVM/node-meta.json
+      hash: md5
+      md5: 873cc89749bafd61e82794df433b6c59
+      size: 123
+  circles_Linear-SVM:
+    cmd: zntrack run src.Classifier --name circles_Linear-SVM
+    deps:
+    - path: nodes/circles/CreateDataset/x.json
+      hash: md5
+      md5: efb007cc1868458c0e7fdfd5d37f83e1
+      size: 2344
+    - path: nodes/circles/TrainTestSplit/x_test.json
+      hash: md5
+      md5: dbda865e8456b483e1d3d874671fb5c4
+      size: 1064
+    - path: nodes/circles/TrainTestSplit/x_train.json
+      hash: md5
+      md5: c4fb160b0323c9f88cddafd66f0cefc9
+      size: 1492
+    - path: nodes/circles/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/circles/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        circles_Linear-SVM:
+          model:
+            _cls: src.Model
+            method: SVC
+            name: Linear-SVM
+            params:
+              C: 0.025
+              kernel: linear
+              random_state: 42
+    outs:
+    - path: nodes/circles/Linear-SVM/figure.png
+      hash: md5
+      md5: 228194ae9e81b8f18b436e31d35f237e
+      size: 35726
+    - path: nodes/circles/Linear-SVM/metrics.json
+      hash: md5
+      md5: fc39c2c19b0915d3fbae3482c35fb387
+      size: 16
+    - path: nodes/circles/Linear-SVM/node-meta.json
+      hash: md5
+      md5: 603e4ba2a6cbba4b77a32f026ed5b5dd
+      size: 124
+  linearly-separable_Linear-SVM:
+    cmd: zntrack run src.Classifier --name linearly-separable_Linear-SVM
+    deps:
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: a120bf0dd0c550f7684319f742faa56c
+      size: 1064
+    - path: nodes/linearly-separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: fbd2eaa752f2882be03715d203ab3b4d
+      size: 1492
+    - path: nodes/linearly-separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ab040fd06576f572f7959d778daa5b78
+      size: 640
+    - path: nodes/linearly-separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: 0c0376d96caa4a32713d821b6ea18869
+      size: 852
+    params:
+      params.yaml:
+        linearly-separable_Linear-SVM:
+          model:
+            _cls: src.Model
+            method: SVC
+            name: Linear-SVM
+            params:
+              C: 0.025
+              kernel: linear
+              random_state: 42
+    outs:
+    - path: nodes/linearly-separable/Linear-SVM/figure.png
+      hash: md5
+      md5: 3a3c5a8c041eb995cf303af4955a3be2
+      size: 31974
+    - path: nodes/linearly-separable/Linear-SVM/metrics.json
+      hash: md5
+      md5: 6fd40c49cbdfd2fba040ace1a51ef989
+      size: 15
+    - path: nodes/linearly-separable/Linear-SVM/node-meta.json
+      hash: md5
+      md5: cb100a2ec3bf4706a6e95932c03aff5e
+      size: 124
+  linearly-separable_RBF-SVM:
+    cmd: zntrack run src.Classifier --name linearly-separable_RBF-SVM
+    deps:
+    - path: nodes/linearly-separable/CreateDataset/x.json
+      hash: md5
+      md5: 1eab27a4186b02d1aa24f97f96e32ad6
+      size: 2344
+    - path: nodes/linearly-separable/TrainTestSplit/x_test.json
+      hash: md5
+      md5: a120bf0dd0c550f7684319f742faa56c
+      size: 1064
+    - path: nodes/linearly-separable/TrainTestSplit/x_train.json
+      hash: md5
+      md5: fbd2eaa752f2882be03715d203ab3b4d
+      size: 1492
+    - path: nodes/linearly-separable/TrainTestSplit/y_test.json
+      hash: md5
+      md5: ab040fd06576f572f7959d778daa5b78
+      size: 640
+    - path: nodes/linearly-separable/TrainTestSplit/y_train.json
+      hash: md5
+      md5: 0c0376d96caa4a32713d821b6ea18869
+      size: 852
+    params:
+      params.yaml:
+        linearly-separable_RBF-SVM:
+          model:
+            _cls: src.Model
+            method: SVC
+            name: RBF-SVM
+            params:
+              C: 1
+              gamma: 2
+              random_state: 42
+    outs:
+    - path: nodes/linearly-separable/RBF-SVM/figure.png
+      hash: md5
+      md5: 056127e98591c8aa656f046b7d99b429
+      size: 36873
+    - path: nodes/linearly-separable/RBF-SVM/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/linearly-separable/RBF-SVM/node-meta.json
+      hash: md5
+      md5: 57810b73f9f4d1d2e47a5f0fee8d9bd8
+      size: 124
+  moons_Linear-SVM:
+    cmd: zntrack run src.Classifier --name moons_Linear-SVM
+    deps:
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/TrainTestSplit/x_test.json
+      hash: md5
+      md5: e15dd07c19a482be5bac0e175bd4e738
+      size: 1064
+    - path: nodes/moons/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 3fbc2da9037e969a97ec0366a569b52b
+      size: 1492
+    - path: nodes/moons/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/moons/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        moons_Linear-SVM:
+          model:
+            _cls: src.Model
+            method: SVC
+            name: Linear-SVM
+            params:
+              C: 0.025
+              kernel: linear
+              random_state: 42
+    outs:
+    - path: nodes/moons/Linear-SVM/figure.png
+      hash: md5
+      md5: cb44849485dbaa79d89cc1e854fbd129
+      size: 35938
+    - path: nodes/moons/Linear-SVM/metrics.json
+      hash: md5
+      md5: 6c3f908469aaaafce7071bfe061a87f1
+      size: 16
+    - path: nodes/moons/Linear-SVM/node-meta.json
+      hash: md5
+      md5: 345ad4fae9f20fd2f4b9e555e6274cf3
+      size: 124
+  moons_RBF-SVM:
+    cmd: zntrack run src.Classifier --name moons_RBF-SVM
+    deps:
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/TrainTestSplit/x_test.json
+      hash: md5
+      md5: e15dd07c19a482be5bac0e175bd4e738
+      size: 1064
+    - path: nodes/moons/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 3fbc2da9037e969a97ec0366a569b52b
+      size: 1492
+    - path: nodes/moons/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/moons/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        moons_RBF-SVM:
+          model:
+            _cls: src.Model
+            method: SVC
+            name: RBF-SVM
+            params:
+              C: 1
+              gamma: 2
+              random_state: 42
+    outs:
+    - path: nodes/moons/RBF-SVM/figure.png
+      hash: md5
+      md5: 044748a13bca6feb042e004f51c0c47f
+      size: 38839
+    - path: nodes/moons/RBF-SVM/metrics.json
+      hash: md5
+      md5: 87fc16f0f98d8c63b25294ca795d1fe0
+      size: 16
+    - path: nodes/moons/RBF-SVM/node-meta.json
+      hash: md5
+      md5: 4e01905c3d65bcd04ddc1e4b48c80c08
+      size: 124
+  circles_CombineFigures:
+    cmd: zntrack run src.CombineFigures --name circles_CombineFigures
+    deps:
+    - path: nodes/circles/AdaBoostClassifier/figure.png
+      hash: md5
+      md5: 3e806003f22ad5c9e763d0589badecfa
+      size: 31576
+    - path: nodes/circles/AdaBoostClassifier/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/circles/DecisionTreeClassifier/figure.png
+      hash: md5
+      md5: 675e9581d4031b5132df7265ff5ade7d
+      size: 30234
+    - path: nodes/circles/DecisionTreeClassifier/metrics.json
+      hash: md5
+      md5: b29a73d8df91f5e9e3d7d8a9bbd02a22
+      size: 16
+    - path: nodes/circles/GaussianNB/figure.png
+      hash: md5
+      md5: 99b7f2766de998e7dcd3f2f6969a5970
+      size: 36128
+    - path: nodes/circles/GaussianNB/metrics.json
+      hash: md5
+      md5: 9bca84926f1c743137c84ac502c7f80d
+      size: 14
+    - path: nodes/circles/GaussianProcessClassifier/figure.png
+      hash: md5
+      md5: 94484198a3770d797f012951a78068e6
+      size: 38100
+    - path: nodes/circles/GaussianProcessClassifier/metrics.json
+      hash: md5
+      md5: 6c3f908469aaaafce7071bfe061a87f1
+      size: 16
+    - path: nodes/circles/KNeighborsClassifier/figure.png
+      hash: md5
+      md5: 9380368310767834c755d4629601bbc2
+      size: 36559
+    - path: nodes/circles/KNeighborsClassifier/metrics.json
+      hash: md5
+      md5: 931f2bd577454670a0a3684e6217d72c
+      size: 15
+    - path: nodes/circles/Linear-SVM/figure.png
+      hash: md5
+      md5: 228194ae9e81b8f18b436e31d35f237e
+      size: 35726
+    - path: nodes/circles/Linear-SVM/metrics.json
+      hash: md5
+      md5: fc39c2c19b0915d3fbae3482c35fb387
+      size: 16
+    - path: nodes/circles/MLPClassifier/figure.png
+      hash: md5
+      md5: f205549c74ea1d45987203afb7a4d9b5
+      size: 35059
+    - path: nodes/circles/MLPClassifier/metrics.json
+      hash: md5
+      md5: eb6105cb6e063541e78084261c806988
+      size: 16
+    - path: nodes/circles/QuadraticDiscriminantAnalysis/figure.png
+      hash: md5
+      md5: 21b75d0a497c1b13ff630982a043a0b4
+      size: 35523
+    - path: nodes/circles/QuadraticDiscriminantAnalysis/metrics.json
+      hash: md5
+      md5: 6935e6ce91ebfb70969e99b273fcd3ab
+      size: 16
+    - path: nodes/circles/RBF-SVM/figure.png
+      hash: md5
+      md5: ea0aa34fc06aa6f979a2aacce500f700
+      size: 36861
+    - path: nodes/circles/RBF-SVM/metrics.json
+      hash: md5
+      md5: 931f2bd577454670a0a3684e6217d72c
+      size: 15
+    - path: nodes/circles/RandomForestClassifier/figure.png
+      hash: md5
+      md5: 4363d4f4277446aba12128136598f722
+      size: 33352
+    - path: nodes/circles/RandomForestClassifier/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    outs:
+    - path: nodes/circles/CombineFigures/combined_figure.png
+      hash: md5
+      md5: eb8f5635e682ced3f23af7c211139bd9
+      size: 381095
+    - path: nodes/circles/CombineFigures/node-meta.json
+      hash: md5
+      md5: 7342e766b0dc5bc7e8f366d203387312
+      size: 124
+  linearly-separable_CombineFigures:
+    cmd: zntrack run src.CombineFigures --name linearly-separable_CombineFigures
+    deps:
+    - path: nodes/linearly-separable/AdaBoostClassifier/figure.png
+      hash: md5
+      md5: 1e3ab1dc2b05a8686d0fa577cf6cb966
+      size: 30752
+    - path: nodes/linearly-separable/AdaBoostClassifier/metrics.json
+      hash: md5
+      md5: 931f2bd577454670a0a3684e6217d72c
+      size: 15
+    - path: nodes/linearly-separable/DecisionTreeClassifier/figure.png
+      hash: md5
+      md5: 052979f527df86bc706a3bc903a3d4ea
+      size: 29049
+    - path: nodes/linearly-separable/DecisionTreeClassifier/metrics.json
+      hash: md5
+      md5: 6c3f908469aaaafce7071bfe061a87f1
+      size: 16
+    - path: nodes/linearly-separable/GaussianNB/figure.png
+      hash: md5
+      md5: 463f5e1b8b0d15f7c7a6a8c5ec7f8fab
+      size: 31215
+    - path: nodes/linearly-separable/GaussianNB/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/linearly-separable/GaussianProcessClassifier/figure.png
+      hash: md5
+      md5: db332ab70a7b93bc82216ca1d53a39b0
+      size: 32270
+    - path: nodes/linearly-separable/GaussianProcessClassifier/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/linearly-separable/KNeighborsClassifier/figure.png
+      hash: md5
+      md5: 8bedd283757795b80122e6d1bae7c48c
+      size: 32399
+    - path: nodes/linearly-separable/KNeighborsClassifier/metrics.json
+      hash: md5
+      md5: 269575a5be5ceea10e00a09e4713ff3d
+      size: 14
+    - path: nodes/linearly-separable/Linear-SVM/figure.png
+      hash: md5
+      md5: 3a3c5a8c041eb995cf303af4955a3be2
+      size: 31974
+    - path: nodes/linearly-separable/Linear-SVM/metrics.json
+      hash: md5
+      md5: 6fd40c49cbdfd2fba040ace1a51ef989
+      size: 15
+    - path: nodes/linearly-separable/MLPClassifier/figure.png
+      hash: md5
+      md5: 39b0233ed78e82dbdaeb132eb356c1ce
+      size: 31711
+    - path: nodes/linearly-separable/MLPClassifier/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/linearly-separable/QuadraticDiscriminantAnalysis/figure.png
+      hash: md5
+      md5: 52983c7e4d0a27be7ac8d13685d37aaf
+      size: 33754
+    - path: nodes/linearly-separable/QuadraticDiscriminantAnalysis/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/linearly-separable/RBF-SVM/figure.png
+      hash: md5
+      md5: 056127e98591c8aa656f046b7d99b429
+      size: 36873
+    - path: nodes/linearly-separable/RBF-SVM/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/linearly-separable/RandomForestClassifier/figure.png
+      hash: md5
+      md5: 7351efef049a04aabce158283530777d
+      size: 31585
+    - path: nodes/linearly-separable/RandomForestClassifier/metrics.json
+      hash: md5
+      md5: 6c3f908469aaaafce7071bfe061a87f1
+      size: 16
+    outs:
+    - path: nodes/linearly-separable/CombineFigures/combined_figure.png
+      hash: md5
+      md5: b13e0df8818b09c3b78d6e45f7636197
+      size: 318899
+    - path: nodes/linearly-separable/CombineFigures/node-meta.json
+      hash: md5
+      md5: 4148d3edff0df6d1f5663da48b9d87fa
+      size: 124
+  moons_CombineFigures:
+    cmd: zntrack run src.CombineFigures --name moons_CombineFigures
+    deps:
+    - path: nodes/moons/AdaBoostClassifier/figure.png
+      hash: md5
+      md5: db67b83c856847cc3a87f260d484ba10
+      size: 32587
+    - path: nodes/moons/AdaBoostClassifier/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/moons/DecisionTreeClassifier/figure.png
+      hash: md5
+      md5: 90647b306896861ca7b57a640e4d20ef
+      size: 30383
+    - path: nodes/moons/DecisionTreeClassifier/metrics.json
+      hash: md5
+      md5: 6fd40c49cbdfd2fba040ace1a51ef989
+      size: 15
+    - path: nodes/moons/GaussianNB/figure.png
+      hash: md5
+      md5: 5030f3e6853bd646abc386fba2045a0d
+      size: 33893
+    - path: nodes/moons/GaussianNB/metrics.json
+      hash: md5
+      md5: 6c3f908469aaaafce7071bfe061a87f1
+      size: 16
+    - path: nodes/moons/GaussianProcessClassifier/figure.png
+      hash: md5
+      md5: 2dbfa0e8e271c0e02931d79c1c796080
+      size: 38807
+    - path: nodes/moons/GaussianProcessClassifier/metrics.json
+      hash: md5
+      md5: 6fd40c49cbdfd2fba040ace1a51ef989
+      size: 15
+    - path: nodes/moons/KNeighborsClassifier/figure.png
+      hash: md5
+      md5: 876efb17b4d2e1e9f202e6ade4c7ee3a
+      size: 35504
+    - path: nodes/moons/KNeighborsClassifier/metrics.json
+      hash: md5
+      md5: 6fd40c49cbdfd2fba040ace1a51ef989
+      size: 15
+    - path: nodes/moons/Linear-SVM/figure.png
+      hash: md5
+      md5: cb44849485dbaa79d89cc1e854fbd129
+      size: 35938
+    - path: nodes/moons/Linear-SVM/metrics.json
+      hash: md5
+      md5: 6c3f908469aaaafce7071bfe061a87f1
+      size: 16
+    - path: nodes/moons/MLPClassifier/figure.png
+      hash: md5
+      md5: 115fd4c789b1e6ae64baac72887cce05
+      size: 34434
+    - path: nodes/moons/MLPClassifier/metrics.json
+      hash: md5
+      md5: 269575a5be5ceea10e00a09e4713ff3d
+      size: 14
+    - path: nodes/moons/QuadraticDiscriminantAnalysis/figure.png
+      hash: md5
+      md5: ab75dd17f7f8670960c0f7abbd7e757e
+      size: 34115
+    - path: nodes/moons/QuadraticDiscriminantAnalysis/metrics.json
+      hash: md5
+      md5: 931f2bd577454670a0a3684e6217d72c
+      size: 15
+    - path: nodes/moons/RBF-SVM/figure.png
+      hash: md5
+      md5: 044748a13bca6feb042e004f51c0c47f
+      size: 38839
+    - path: nodes/moons/RBF-SVM/metrics.json
+      hash: md5
+      md5: 87fc16f0f98d8c63b25294ca795d1fe0
+      size: 16
+    - path: nodes/moons/RandomForestClassifier/figure.png
+      hash: md5
+      md5: 325f5ed856c6cc03dc34e755625ce32b
+      size: 32517
+    - path: nodes/moons/RandomForestClassifier/metrics.json
+      hash: md5
+      md5: 6fd40c49cbdfd2fba040ace1a51ef989
+      size: 15
+    outs:
+    - path: nodes/moons/CombineFigures/combined_figure.png
+      hash: md5
+      md5: 4d0105422d14f01da0de2d20020dd871
+      size: 354312
+    - path: nodes/moons/CombineFigures/node-meta.json
+      hash: md5
+      md5: 4d76057c977ad75008394d4790a60c2a
+      size: 123
