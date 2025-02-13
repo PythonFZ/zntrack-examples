@@ -1,5 +1,6 @@
 import zntrack
 
+# Store all outputs in the DVC cache and avoid GIT tracked Node outputs.
 zntrack.config.ALWAYS_CACHE = True
 
 from src import Classifier, CombineFigures, CreateDataset, Model, TrainTestSplit
