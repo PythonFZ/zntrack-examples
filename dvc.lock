@@ -1,0 +1,519 @@
+schema: '2.0'
+stages:
+  moons_CreateDataset:
+    cmd: zntrack run src.CreateDataset --name moons_CreateDataset
+    params:
+      params.yaml:
+        moons_CreateDataset:
+          method: make_moons
+          params:
+            noise: 0.3
+            random_state: 0
+    outs:
+    - path: nodes/moons/CreateDataset/node-meta.json
+      hash: md5
+      md5: 19a336df64e032e75b07c20065cc85a2
+      size: 124
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/CreateDataset/y.json
+      hash: md5
+      md5: 04932df476dafb4c7e435e1642ffb692
+      size: 1280
+  moons_TrainTestSplit:
+    cmd: zntrack run src.TrainTestSplit --name moons_TrainTestSplit
+    deps:
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/CreateDataset/y.json
+      hash: md5
+      md5: 04932df476dafb4c7e435e1642ffb692
+      size: 1280
+    params:
+      params.yaml:
+        moons_TrainTestSplit:
+          random_state: 42
+          test_size: 0.4
+    outs:
+    - path: nodes/moons/TrainTestSplit/node-meta.json
+      hash: md5
+      md5: 6a3a8367d003e8966ab0de2bd6cb941b
+      size: 124
+    - path: nodes/moons/TrainTestSplit/x_test.json
+      hash: md5
+      md5: e15dd07c19a482be5bac0e175bd4e738
+      size: 1064
+    - path: nodes/moons/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 3fbc2da9037e969a97ec0366a569b52b
+      size: 1492
+    - path: nodes/moons/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/moons/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+  moons_AdaBoostClassifier:
+    cmd: zntrack run src.Classifier --name moons_AdaBoostClassifier
+    deps:
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/TrainTestSplit/x_test.json
+      hash: md5
+      md5: e15dd07c19a482be5bac0e175bd4e738
+      size: 1064
+    - path: nodes/moons/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 3fbc2da9037e969a97ec0366a569b52b
+      size: 1492
+    - path: nodes/moons/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/moons/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        moons_AdaBoostClassifier:
+          model:
+            _cls: src.Model
+            method: AdaBoostClassifier
+            name: AdaBoostClassifier
+            params:
+              random_state: 42
+    outs:
+    - path: nodes/moons/AdaBoostClassifier/figure.png
+      hash: md5
+      md5: dfcff5a3efd3594a16fc399eefc79ab9
+      size: 34038
+    - path: nodes/moons/AdaBoostClassifier/metrics.json
+      hash: md5
+      md5: 1a2dbefb56e640b6d6b28a66531c134a
+      size: 16
+    - path: nodes/moons/AdaBoostClassifier/node-meta.json
+      hash: md5
+      md5: c9d4915b47406095e140add7bcef6645
+      size: 124
+  moons_DecisionTreeClassifier:
+    cmd: zntrack run src.Classifier --name moons_DecisionTreeClassifier
+    deps:
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/TrainTestSplit/x_test.json
+      hash: md5
+      md5: e15dd07c19a482be5bac0e175bd4e738
+      size: 1064
+    - path: nodes/moons/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 3fbc2da9037e969a97ec0366a569b52b
+      size: 1492
+    - path: nodes/moons/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/moons/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        moons_DecisionTreeClassifier:
+          model:
+            _cls: src.Model
+            method: DecisionTreeClassifier
+            name: DecisionTreeClassifier
+            params:
+              max_depth: 5
+              random_state: 42
+    outs:
+    - path: nodes/moons/DecisionTreeClassifier/figure.png
+      hash: md5
+      md5: 6989a3fd1da532e59e3f3913afcec714
+      size: 31767
+    - path: nodes/moons/DecisionTreeClassifier/metrics.json
+      hash: md5
+      md5: 6fd40c49cbdfd2fba040ace1a51ef989
+      size: 15
+    - path: nodes/moons/DecisionTreeClassifier/node-meta.json
+      hash: md5
+      md5: 596df097bd353bb83eb84161f1a0105f
+      size: 124
+  moons_GaussianNB:
+    cmd: zntrack run src.Classifier --name moons_GaussianNB
+    deps:
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/TrainTestSplit/x_test.json
+      hash: md5
+      md5: e15dd07c19a482be5bac0e175bd4e738
+      size: 1064
+    - path: nodes/moons/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 3fbc2da9037e969a97ec0366a569b52b
+      size: 1492
+    - path: nodes/moons/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/moons/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        moons_GaussianNB:
+          model:
+            _cls: src.Model
+            method: GaussianNB
+            name: GaussianNB
+            params: {}
+    outs:
+    - path: nodes/moons/GaussianNB/figure.png
+      hash: md5
+      md5: 29df7012b67a24cefabffd9d20be70ac
+      size: 35117
+    - path: nodes/moons/GaussianNB/metrics.json
+      hash: md5
+      md5: 6c3f908469aaaafce7071bfe061a87f1
+      size: 16
+    - path: nodes/moons/GaussianNB/node-meta.json
+      hash: md5
+      md5: e3cd66706a175cc0439ba594d7f024f9
+      size: 124
+  moons_GaussianProcessClassifier:
+    cmd: zntrack run src.Classifier --name moons_GaussianProcessClassifier
+    deps:
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/TrainTestSplit/x_test.json
+      hash: md5
+      md5: e15dd07c19a482be5bac0e175bd4e738
+      size: 1064
+    - path: nodes/moons/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 3fbc2da9037e969a97ec0366a569b52b
+      size: 1492
+    - path: nodes/moons/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/moons/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        moons_GaussianProcessClassifier:
+          model:
+            _cls: src.Model
+            method: GaussianProcessClassifier
+            name: GaussianProcessClassifier
+            params:
+              random_state: 42
+    outs:
+    - path: nodes/moons/GaussianProcessClassifier/figure.png
+      hash: md5
+      md5: 17a2e70f540955b89ebf00ac8ed4f52d
+      size: 40388
+    - path: nodes/moons/GaussianProcessClassifier/metrics.json
+      hash: md5
+      md5: 6fd40c49cbdfd2fba040ace1a51ef989
+      size: 15
+    - path: nodes/moons/GaussianProcessClassifier/node-meta.json
+      hash: md5
+      md5: bc4e57ac814344e7a858a0f2c32da2e0
+      size: 124
+  moons_KNeighborsClassifier:
+    cmd: zntrack run src.Classifier --name moons_KNeighborsClassifier
+    deps:
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/TrainTestSplit/x_test.json
+      hash: md5
+      md5: e15dd07c19a482be5bac0e175bd4e738
+      size: 1064
+    - path: nodes/moons/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 3fbc2da9037e969a97ec0366a569b52b
+      size: 1492
+    - path: nodes/moons/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/moons/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        moons_KNeighborsClassifier:
+          model:
+            _cls: src.Model
+            method: KNeighborsClassifier
+            name: KNeighborsClassifier
+            params:
+              n_neighbors: 3
+    outs:
+    - path: nodes/moons/KNeighborsClassifier/figure.png
+      hash: md5
+      md5: be82795bea9804de6f6d091863247178
+      size: 37013
+    - path: nodes/moons/KNeighborsClassifier/metrics.json
+      hash: md5
+      md5: 6fd40c49cbdfd2fba040ace1a51ef989
+      size: 15
+    - path: nodes/moons/KNeighborsClassifier/node-meta.json
+      hash: md5
+      md5: 8312b57becfa7dd2d403f3269a531c56
+      size: 123
+  moons_Linear_SVM:
+    cmd: zntrack run src.Classifier --name moons_Linear_SVM
+    deps:
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/TrainTestSplit/x_test.json
+      hash: md5
+      md5: e15dd07c19a482be5bac0e175bd4e738
+      size: 1064
+    - path: nodes/moons/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 3fbc2da9037e969a97ec0366a569b52b
+      size: 1492
+    - path: nodes/moons/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/moons/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        moons_Linear_SVM:
+          model:
+            _cls: src.Model
+            method: SVC
+            name: Linear_SVM
+            params:
+              C: 0.025
+              kernel: linear
+              random_state: 42
+    outs:
+    - path: nodes/moons/Linear_SVM/figure.png
+      hash: md5
+      md5: 7d7797a6963849397c8fd4afd889ed82
+      size: 37295
+    - path: nodes/moons/Linear_SVM/metrics.json
+      hash: md5
+      md5: 6c3f908469aaaafce7071bfe061a87f1
+      size: 16
+    - path: nodes/moons/Linear_SVM/node-meta.json
+      hash: md5
+      md5: f5679a1be8b3c2579906db991b3a7b65
+      size: 124
+  moons_MLPClassifier:
+    cmd: zntrack run src.Classifier --name moons_MLPClassifier
+    deps:
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/TrainTestSplit/x_test.json
+      hash: md5
+      md5: e15dd07c19a482be5bac0e175bd4e738
+      size: 1064
+    - path: nodes/moons/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 3fbc2da9037e969a97ec0366a569b52b
+      size: 1492
+    - path: nodes/moons/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/moons/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        moons_MLPClassifier:
+          model:
+            _cls: src.Model
+            method: MLPClassifier
+            name: MLPClassifier
+            params:
+              alpha: 1
+              max_iter: 1000
+              random_state: 42
+    outs:
+    - path: nodes/moons/MLPClassifier/figure.png
+      hash: md5
+      md5: 55ceb667f790dd4fdfe6156d093987e3
+      size: 35651
+    - path: nodes/moons/MLPClassifier/metrics.json
+      hash: md5
+      md5: 269575a5be5ceea10e00a09e4713ff3d
+      size: 14
+    - path: nodes/moons/MLPClassifier/node-meta.json
+      hash: md5
+      md5: 91f6eb086b785b4fee84885abce8550f
+      size: 124
+  moons_QuadraticDiscriminantAnalysis:
+    cmd: zntrack run src.Classifier --name moons_QuadraticDiscriminantAnalysis
+    deps:
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/TrainTestSplit/x_test.json
+      hash: md5
+      md5: e15dd07c19a482be5bac0e175bd4e738
+      size: 1064
+    - path: nodes/moons/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 3fbc2da9037e969a97ec0366a569b52b
+      size: 1492
+    - path: nodes/moons/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/moons/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        moons_QuadraticDiscriminantAnalysis:
+          model:
+            _cls: src.Model
+            method: QuadraticDiscriminantAnalysis
+            name: QuadraticDiscriminantAnalysis
+            params: {}
+    outs:
+    - path: nodes/moons/QuadraticDiscriminantAnalysis/figure.png
+      hash: md5
+      md5: 9d7467107ed919b6eacd96c8d1f32c38
+      size: 35532
+    - path: nodes/moons/QuadraticDiscriminantAnalysis/metrics.json
+      hash: md5
+      md5: 931f2bd577454670a0a3684e6217d72c
+      size: 15
+    - path: nodes/moons/QuadraticDiscriminantAnalysis/node-meta.json
+      hash: md5
+      md5: 7b39f68120af89d93ecb0402f8f84ca7
+      size: 124
+  moons_RBF_SVM:
+    cmd: zntrack run src.Classifier --name moons_RBF_SVM
+    deps:
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/TrainTestSplit/x_test.json
+      hash: md5
+      md5: e15dd07c19a482be5bac0e175bd4e738
+      size: 1064
+    - path: nodes/moons/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 3fbc2da9037e969a97ec0366a569b52b
+      size: 1492
+    - path: nodes/moons/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/moons/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        moons_RBF_SVM:
+          model:
+            _cls: src.Model
+            method: SVC
+            name: RBF_SVM
+            params:
+              C: 1
+              gamma: 2
+              random_state: 42
+    outs:
+    - path: nodes/moons/RBF_SVM/figure.png
+      hash: md5
+      md5: 47eee1bd568ce20be5321f4e45c28dd7
+      size: 40409
+    - path: nodes/moons/RBF_SVM/metrics.json
+      hash: md5
+      md5: 87fc16f0f98d8c63b25294ca795d1fe0
+      size: 16
+    - path: nodes/moons/RBF_SVM/node-meta.json
+      hash: md5
+      md5: 29e153d69173b0306fe54627a3be43fa
+      size: 124
+  moons_RandomForestClassifier:
+    cmd: zntrack run src.Classifier --name moons_RandomForestClassifier
+    deps:
+    - path: nodes/moons/CreateDataset/x.json
+      hash: md5
+      md5: 949e56ac14207a80c5d218e2300c4d62
+      size: 2344
+    - path: nodes/moons/TrainTestSplit/x_test.json
+      hash: md5
+      md5: e15dd07c19a482be5bac0e175bd4e738
+      size: 1064
+    - path: nodes/moons/TrainTestSplit/x_train.json
+      hash: md5
+      md5: 3fbc2da9037e969a97ec0366a569b52b
+      size: 1492
+    - path: nodes/moons/TrainTestSplit/y_test.json
+      hash: md5
+      md5: be066f2a65e93447a860df42afcc2637
+      size: 640
+    - path: nodes/moons/TrainTestSplit/y_train.json
+      hash: md5
+      md5: f17c7a40f7883bb86ab3e5377a80c850
+      size: 852
+    params:
+      params.yaml:
+        moons_RandomForestClassifier:
+          model:
+            _cls: src.Model
+            method: RandomForestClassifier
+            name: RandomForestClassifier
+            params:
+              max_depth: 5
+              max_features: 1
+              n_estimators: 10
+              random_state: 42
+    outs:
+    - path: nodes/moons/RandomForestClassifier/figure.png
+      hash: md5
+      md5: 2798a352f9873c5098419c69cfb94cd6
+      size: 33774
+    - path: nodes/moons/RandomForestClassifier/metrics.json
+      hash: md5
+      md5: 6fd40c49cbdfd2fba040ace1a51ef989
+      size: 15
+    - path: nodes/moons/RandomForestClassifier/node-meta.json
+      hash: md5
+      md5: 6e10c7108f12e60aaae870e24080efae
+      size: 124

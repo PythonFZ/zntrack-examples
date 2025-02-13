@@ -1,0 +1,86 @@
+moons_AdaBoostClassifier:
+  model:
+    _cls: src.Model
+    method: AdaBoostClassifier
+    name: AdaBoostClassifier
+    params:
+      random_state: 42
+moons_CreateDataset:
+  method: make_moons
+  params:
+    noise: 0.3
+    random_state: 0
+moons_DecisionTreeClassifier:
+  model:
+    _cls: src.Model
+    method: DecisionTreeClassifier
+    name: DecisionTreeClassifier
+    params:
+      max_depth: 5
+      random_state: 42
+moons_GaussianNB:
+  model:
+    _cls: src.Model
+    method: GaussianNB
+    name: GaussianNB
+    params: {}
+moons_GaussianProcessClassifier:
+  model:
+    _cls: src.Model
+    method: GaussianProcessClassifier
+    name: GaussianProcessClassifier
+    params:
+      random_state: 42
+moons_KNeighborsClassifier:
+  model:
+    _cls: src.Model
+    method: KNeighborsClassifier
+    name: KNeighborsClassifier
+    params:
+      n_neighbors: 3
+moons_Linear_SVM:
+  model:
+    _cls: src.Model
+    method: SVC
+    name: Linear_SVM
+    params:
+      C: 0.025
+      kernel: linear
+      random_state: 42
+moons_MLPClassifier:
+  model:
+    _cls: src.Model
+    method: MLPClassifier
+    name: MLPClassifier
+    params:
+      alpha: 1
+      max_iter: 1000
+      random_state: 42
+moons_QuadraticDiscriminantAnalysis:
+  model:
+    _cls: src.Model
+    method: QuadraticDiscriminantAnalysis
+    name: QuadraticDiscriminantAnalysis
+    params: {}
+moons_RBF_SVM:
+  model:
+    _cls: src.Model
+    method: SVC
+    name: RBF_SVM
+    params:
+      C: 1
+      gamma: 2
+      random_state: 42
+moons_RandomForestClassifier:
+  model:
+    _cls: src.Model
+    method: RandomForestClassifier
+    name: RandomForestClassifier
+    params:
+      max_depth: 5
+      max_features: 1
+      n_estimators: 10
+      random_state: 42
+moons_TrainTestSplit:
+  random_state: 42
+  test_size: 0.4

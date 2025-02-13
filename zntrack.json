@@ -1,0 +1,1068 @@
+{
+    "moons_CreateDataset": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/moons/CreateDataset"
+        }
+    },
+    "moons_TrainTestSplit": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/moons/TrainTestSplit"
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "y": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y",
+                "item": null
+            }
+        }
+    },
+    "moons_KNeighborsClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/moons/KNeighborsClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "moons_Linear_SVM": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/moons/Linear_SVM"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "moons_RBF_SVM": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/moons/RBF_SVM"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "moons_GaussianProcessClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/moons/GaussianProcessClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "moons_DecisionTreeClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/moons/DecisionTreeClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "moons_RandomForestClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/moons/RandomForestClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "moons_MLPClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/moons/MLPClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "moons_AdaBoostClassifier": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/moons/AdaBoostClassifier"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "moons_GaussianNB": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/moons/GaussianNB"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    },
+    "moons_QuadraticDiscriminantAnalysis": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/moons/QuadraticDiscriminantAnalysis"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "Model"
+            }
+        },
+        "x": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_CreateDataset",
+                        "cls": "CreateDataset",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x",
+                "item": null
+            }
+        },
+        "x_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_train",
+                "item": null
+            }
+        },
+        "y_train": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_train",
+                "item": null
+            }
+        },
+        "x_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "x_test",
+                "item": null
+            }
+        },
+        "y_test": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "moons_TrainTestSplit",
+                        "cls": "TrainTestSplit",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "y_test",
+                "item": null
+            }
+        },
+        "figure_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/figure.png"
+        }
+    }
+}

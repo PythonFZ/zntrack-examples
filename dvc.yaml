@@ -1,0 +1,186 @@
+stages:
+  moons_AdaBoostClassifier:
+    cmd: zntrack run src.Classifier --name moons_AdaBoostClassifier
+    deps:
+    - nodes/moons/CreateDataset/x.json
+    - nodes/moons/TrainTestSplit/x_test.json
+    - nodes/moons/TrainTestSplit/x_train.json
+    - nodes/moons/TrainTestSplit/y_test.json
+    - nodes/moons/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/moons/AdaBoostClassifier/metrics.json
+    - nodes/moons/AdaBoostClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/moons/AdaBoostClassifier/figure.png
+    params:
+    - moons_AdaBoostClassifier
+  moons_CreateDataset:
+    cmd: zntrack run src.CreateDataset --name moons_CreateDataset
+    metrics:
+    - nodes/moons/CreateDataset/node-meta.json:
+        cache: true
+    outs:
+    - nodes/moons/CreateDataset/x.json
+    - nodes/moons/CreateDataset/y.json
+    params:
+    - moons_CreateDataset
+  moons_DecisionTreeClassifier:
+    cmd: zntrack run src.Classifier --name moons_DecisionTreeClassifier
+    deps:
+    - nodes/moons/CreateDataset/x.json
+    - nodes/moons/TrainTestSplit/x_test.json
+    - nodes/moons/TrainTestSplit/x_train.json
+    - nodes/moons/TrainTestSplit/y_test.json
+    - nodes/moons/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/moons/DecisionTreeClassifier/metrics.json
+    - nodes/moons/DecisionTreeClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/moons/DecisionTreeClassifier/figure.png
+    params:
+    - moons_DecisionTreeClassifier
+  moons_GaussianNB:
+    cmd: zntrack run src.Classifier --name moons_GaussianNB
+    deps:
+    - nodes/moons/CreateDataset/x.json
+    - nodes/moons/TrainTestSplit/x_test.json
+    - nodes/moons/TrainTestSplit/x_train.json
+    - nodes/moons/TrainTestSplit/y_test.json
+    - nodes/moons/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/moons/GaussianNB/metrics.json
+    - nodes/moons/GaussianNB/node-meta.json:
+        cache: true
+    outs:
+    - nodes/moons/GaussianNB/figure.png
+    params:
+    - moons_GaussianNB
+  moons_GaussianProcessClassifier:
+    cmd: zntrack run src.Classifier --name moons_GaussianProcessClassifier
+    deps:
+    - nodes/moons/CreateDataset/x.json
+    - nodes/moons/TrainTestSplit/x_test.json
+    - nodes/moons/TrainTestSplit/x_train.json
+    - nodes/moons/TrainTestSplit/y_test.json
+    - nodes/moons/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/moons/GaussianProcessClassifier/metrics.json
+    - nodes/moons/GaussianProcessClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/moons/GaussianProcessClassifier/figure.png
+    params:
+    - moons_GaussianProcessClassifier
+  moons_KNeighborsClassifier:
+    cmd: zntrack run src.Classifier --name moons_KNeighborsClassifier
+    deps:
+    - nodes/moons/CreateDataset/x.json
+    - nodes/moons/TrainTestSplit/x_test.json
+    - nodes/moons/TrainTestSplit/x_train.json
+    - nodes/moons/TrainTestSplit/y_test.json
+    - nodes/moons/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/moons/KNeighborsClassifier/metrics.json
+    - nodes/moons/KNeighborsClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/moons/KNeighborsClassifier/figure.png
+    params:
+    - moons_KNeighborsClassifier
+  moons_Linear_SVM:
+    cmd: zntrack run src.Classifier --name moons_Linear_SVM
+    deps:
+    - nodes/moons/CreateDataset/x.json
+    - nodes/moons/TrainTestSplit/x_test.json
+    - nodes/moons/TrainTestSplit/x_train.json
+    - nodes/moons/TrainTestSplit/y_test.json
+    - nodes/moons/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/moons/Linear_SVM/metrics.json
+    - nodes/moons/Linear_SVM/node-meta.json:
+        cache: true
+    outs:
+    - nodes/moons/Linear_SVM/figure.png
+    params:
+    - moons_Linear_SVM
+  moons_MLPClassifier:
+    cmd: zntrack run src.Classifier --name moons_MLPClassifier
+    deps:
+    - nodes/moons/CreateDataset/x.json
+    - nodes/moons/TrainTestSplit/x_test.json
+    - nodes/moons/TrainTestSplit/x_train.json
+    - nodes/moons/TrainTestSplit/y_test.json
+    - nodes/moons/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/moons/MLPClassifier/metrics.json
+    - nodes/moons/MLPClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/moons/MLPClassifier/figure.png
+    params:
+    - moons_MLPClassifier
+  moons_QuadraticDiscriminantAnalysis:
+    cmd: zntrack run src.Classifier --name moons_QuadraticDiscriminantAnalysis
+    deps:
+    - nodes/moons/CreateDataset/x.json
+    - nodes/moons/TrainTestSplit/x_test.json
+    - nodes/moons/TrainTestSplit/x_train.json
+    - nodes/moons/TrainTestSplit/y_test.json
+    - nodes/moons/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/moons/QuadraticDiscriminantAnalysis/metrics.json
+    - nodes/moons/QuadraticDiscriminantAnalysis/node-meta.json:
+        cache: true
+    outs:
+    - nodes/moons/QuadraticDiscriminantAnalysis/figure.png
+    params:
+    - moons_QuadraticDiscriminantAnalysis
+  moons_RBF_SVM:
+    cmd: zntrack run src.Classifier --name moons_RBF_SVM
+    deps:
+    - nodes/moons/CreateDataset/x.json
+    - nodes/moons/TrainTestSplit/x_test.json
+    - nodes/moons/TrainTestSplit/x_train.json
+    - nodes/moons/TrainTestSplit/y_test.json
+    - nodes/moons/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/moons/RBF_SVM/metrics.json
+    - nodes/moons/RBF_SVM/node-meta.json:
+        cache: true
+    outs:
+    - nodes/moons/RBF_SVM/figure.png
+    params:
+    - moons_RBF_SVM
+  moons_RandomForestClassifier:
+    cmd: zntrack run src.Classifier --name moons_RandomForestClassifier
+    deps:
+    - nodes/moons/CreateDataset/x.json
+    - nodes/moons/TrainTestSplit/x_test.json
+    - nodes/moons/TrainTestSplit/x_train.json
+    - nodes/moons/TrainTestSplit/y_test.json
+    - nodes/moons/TrainTestSplit/y_train.json
+    metrics:
+    - nodes/moons/RandomForestClassifier/metrics.json
+    - nodes/moons/RandomForestClassifier/node-meta.json:
+        cache: true
+    outs:
+    - nodes/moons/RandomForestClassifier/figure.png
+    params:
+    - moons_RandomForestClassifier
+  moons_TrainTestSplit:
+    cmd: zntrack run src.TrainTestSplit --name moons_TrainTestSplit
+    deps:
+    - nodes/moons/CreateDataset/x.json
+    - nodes/moons/CreateDataset/y.json
+    metrics:
+    - nodes/moons/TrainTestSplit/node-meta.json:
+        cache: true
+    outs:
+    - nodes/moons/TrainTestSplit/x_test.json
+    - nodes/moons/TrainTestSplit/x_train.json
+    - nodes/moons/TrainTestSplit/y_test.json
+    - nodes/moons/TrainTestSplit/y_train.json
+    params:
+    - moons_TrainTestSplit
