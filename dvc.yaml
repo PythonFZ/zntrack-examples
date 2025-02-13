@@ -16,7 +16,6 @@ stages:
     params:
     - circles_AdaBoostClassifier
   circles_CombineFigures:
-    always_changed: true
     cmd: zntrack run src.CombineFigures --name circles_CombineFigures
     deps:
     - nodes/circles/AdaBoostClassifier/figure.png
@@ -230,7 +229,6 @@ stages:
     params:
     - linearly-separable_AdaBoostClassifier
   linearly-separable_CombineFigures:
-    always_changed: true
     cmd: zntrack run src.CombineFigures --name linearly-separable_CombineFigures
     deps:
     - nodes/linearly-separable/AdaBoostClassifier/figure.png
@@ -444,7 +442,6 @@ stages:
     params:
     - moons_AdaBoostClassifier
   moons_CombineFigures:
-    always_changed: true
     cmd: zntrack run src.CombineFigures --name moons_CombineFigures
     deps:
     - nodes/moons/AdaBoostClassifier/figure.png
