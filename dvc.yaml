@@ -1,0 +1,32 @@
+stages:
+  Pack:
+    cmd: zntrack run src.Pack --name Pack
+    deps:
+    - nodes/Smiles2Conformers/frames.xyz
+    metrics:
+    - nodes/Pack/node-meta.json:
+        cache: false
+    outs:
+    - nodes/Pack/frames.xyz
+    params:
+    - Pack
+  Smiles2Conformers:
+    cmd: zntrack run src.Smiles2Conformers --name Smiles2Conformers
+    metrics:
+    - nodes/Smiles2Conformers/node-meta.json:
+        cache: false
+    outs:
+    - nodes/Smiles2Conformers/frames.xyz
+    params:
+    - Smiles2Conformers
+  StructureOptimization:
+    cmd: zntrack run src.StructureOptimization --name StructureOptimization
+    deps:
+    - nodes/Pack/frames.xyz
+    metrics:
+    - nodes/StructureOptimization/node-meta.json:
+        cache: false
+    outs:
+    - nodes/StructureOptimization/frames.traj
+    params:
+    - StructureOptimization

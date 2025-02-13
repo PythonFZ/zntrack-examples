@@ -1,0 +1,75 @@
+{
+    "Smiles2Conformers": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/Smiles2Conformers"
+        },
+        "frames_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/frames.xyz"
+        }
+    },
+    "Pack": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/Pack"
+        },
+        "data": [
+            {
+                "_type": "znflow.Connection",
+                "value": {
+                    "instance": {
+                        "_type": "zntrack.Node",
+                        "value": {
+                            "module": "src",
+                            "name": "Smiles2Conformers",
+                            "cls": "Smiles2Conformers",
+                            "remote": null,
+                            "rev": null
+                        }
+                    },
+                    "attribute": "frames",
+                    "item": null
+                }
+            }
+        ],
+        "frames_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/frames.xyz"
+        }
+    },
+    "StructureOptimization": {
+        "nwd": {
+            "_type": "pathlib.Path",
+            "value": "nodes/StructureOptimization"
+        },
+        "model": {
+            "_type": "@dataclasses.dataclass",
+            "value": {
+                "module": "src",
+                "cls": "MACE_MP"
+            }
+        },
+        "data": {
+            "_type": "znflow.Connection",
+            "value": {
+                "instance": {
+                    "_type": "zntrack.Node",
+                    "value": {
+                        "module": "src",
+                        "name": "Pack",
+                        "cls": "Pack",
+                        "remote": null,
+                        "rev": null
+                    }
+                },
+                "attribute": "frames",
+                "item": null
+            }
+        },
+        "frames_path": {
+            "_type": "pathlib.Path",
+            "value": "$nwd$/frames.traj"
+        }
+    }
+}

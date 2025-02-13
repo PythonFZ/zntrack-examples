@@ -1,0 +1,13 @@
+Pack:
+  counts:
+  - 32
+  density: 789
+Smiles2Conformers:
+  numConfs: 32
+  smiles: CCO
+StructureOptimization:
+  data_id: -1
+  fmax: 0.5
+  model:
+    _cls: src.MACE_MP
+    model: medium

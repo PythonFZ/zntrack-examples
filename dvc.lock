@@ -1,0 +1,64 @@
+schema: '2.0'
+stages:
+  Smiles2Conformers:
+    cmd: zntrack run src.Smiles2Conformers --name Smiles2Conformers
+    params:
+      params.yaml:
+        Smiles2Conformers:
+          numConfs: 32
+          smiles: CCO
+    outs:
+    - path: nodes/Smiles2Conformers/frames.xyz
+      hash: md5
+      md5: b609f5dd204f7c4ff6a357a6e3a9a053
+      size: 16992
+    - path: nodes/Smiles2Conformers/node-meta.json
+      hash: md5
+      md5: 5d6205cdab8c0c918ce963f7abea1266
+      size: 124
+  Pack:
+    cmd: zntrack run src.Pack --name Pack
+    deps:
+    - path: nodes/Smiles2Conformers/frames.xyz
+      hash: md5
+      md5: b609f5dd204f7c4ff6a357a6e3a9a053
+      size: 16992
+    params:
+      params.yaml:
+        Pack:
+          counts:
+          - 32
+          density: 789
+    outs:
+    - path: nodes/Pack/frames.xyz
+      hash: md5
+      md5: b07c743fe4fb8abbe7654dee08626133
+      size: 30166
+    - path: nodes/Pack/node-meta.json
+      hash: md5
+      md5: 6b00de30844e15c215e17135111e87ac
+      size: 124
+  StructureOptimization:
+    cmd: zntrack run src.StructureOptimization --name StructureOptimization
+    deps:
+    - path: nodes/Pack/frames.xyz
+      hash: md5
+      md5: b07c743fe4fb8abbe7654dee08626133
+      size: 30166
+    params:
+      params.yaml:
+        StructureOptimization:
+          data_id: -1
+          fmax: 0.5
+          model:
+            _cls: src.MACE_MP
+            model: medium
+    outs:
+    - path: nodes/StructureOptimization/frames.traj
+      hash: md5
+      md5: 62f87bab0b2ad1644f93a50e9057fb82
+      size: 307385
+    - path: nodes/StructureOptimization/node-meta.json
+      hash: md5
+      md5: 46223fa3aa939e47771d68f833472fdd
+      size: 125
