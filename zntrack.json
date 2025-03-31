@@ -5,16 +5,16 @@
             "value": "nodes/ParamsToMetrics"
         }
     },
-    "StringOuts": {
+    "outs_StringOuts": {
         "nwd": {
             "_type": "pathlib.Path",
-            "value": "nodes/StringOuts"
+            "value": "nodes/outs/StringOuts"
         }
     },
-    "NumericOuts": {
+    "outs_NumericOuts": {
         "nwd": {
             "_type": "pathlib.Path",
-            "value": "nodes/NumericOuts"
+            "value": "nodes/outs/NumericOuts"
         }
     },
     "plots_WritePlots": {

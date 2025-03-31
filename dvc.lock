@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   ParamsToMetrics:
-    cmd: zntrack run zntrack.examples.ParamsToMetrics --name ParamsToMetrics
+    cmd: zntrack run zntrack.examples.nodes.ParamsToMetrics --name ParamsToMetrics
     params:
       params.yaml:
         ParamsToMetrics:
@@ -15,10 +15,10 @@ stages:
       size: 30
     - path: nodes/ParamsToMetrics/node-meta.json
       hash: md5
-      md5: 68ebd22dea3ca78437f498a4727cb280
-      size: 64
+      md5: 7f363eebb8f43043649f4af45b76b75f
+      size: 154
   plots_WritePlots:
-    cmd: zntrack run zntrack.examples.WritePlots --name plots_WritePlots
+    cmd: zntrack run zntrack.examples.nodes.WritePlots --name plots_WritePlots
     params:
       params.yaml:
         plots_WritePlots:
@@ -47,14 +47,14 @@ stages:
     outs:
     - path: nodes/plots/WritePlots/node-meta.json
       hash: md5
-      md5: f2c04c7c6b81f5572b8c046d9d3dec2c
-      size: 64
+      md5: 345525c8b71c9855510834c811a06f0f
+      size: 153
     - path: nodes/plots/WritePlots/plots.csv
       hash: md5
       md5: e3f2b5876a4da68d27324d37e1b29268
       size: 65
   plots_WritePlots_1:
-    cmd: zntrack run zntrack.examples.WritePlots --name plots_WritePlots_1
+    cmd: zntrack run zntrack.examples.nodes.WritePlots --name plots_WritePlots_1
     params:
       params.yaml:
         plots_WritePlots_1:
@@ -83,8 +83,8 @@ stages:
     outs:
     - path: nodes/plots/WritePlots_1/node-meta.json
       hash: md5
-      md5: db368c8be04e23a8cbfd045afa6b6886
-      size: 64
+      md5: 70a0016de5a0f1e137ca931f702c079d
+      size: 153
     - path: nodes/plots/WritePlots_1/plots.csv
       hash: md5
       md5: 79990e515550efd968acdca3320809ee
@@ -116,6 +116,36 @@ stages:
       md5: fcf73eba5427744e58b20ddd05c3dade
       size: 64
     - path: nodes/StringOuts/outs.json
+      hash: md5
+      md5: b4c4257a14dfa46184441cee5db24a88
+      size: 13
+  outs_NumericOuts:
+    cmd: zntrack run zntrack.examples.nodes.ParamsToOuts --name outs_NumericOuts
+    params:
+      params.yaml:
+        outs_NumericOuts:
+          params: 42
+    outs:
+    - path: nodes/outs/NumericOuts/node-meta.json
+      hash: md5
+      md5: 9a6e9f4f8b60686c4d5e1f4c4840c10f
+      size: 154
+    - path: nodes/outs/NumericOuts/outs.json
+      hash: md5
+      md5: a1d0c6e83f027327d8461063f4ac58a6
+      size: 2
+  outs_StringOuts:
+    cmd: zntrack run zntrack.examples.nodes.ParamsToOuts --name outs_StringOuts
+    params:
+      params.yaml:
+        outs_StringOuts:
+          params: Lorem ipsum
+    outs:
+    - path: nodes/outs/StringOuts/node-meta.json
+      hash: md5
+      md5: 5eb7ac36b99c083c6ff73d029b099aa0
+      size: 154
+    - path: nodes/outs/StringOuts/outs.json
       hash: md5
       md5: b4c4257a14dfa46184441cee5db24a88
       size: 13

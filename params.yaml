@@ -1,10 +1,10 @@
-NumericOuts:
-  params: 42
 ParamsToMetrics:
   params:
     accuracy: 0.9
     loss: 0.1
-StringOuts:
+outs_NumericOuts:
+  params: 42
+outs_StringOuts:
   params: Lorem ipsum
 plots_WritePlots:
   x:

@@ -10,47 +10,46 @@ plots:
     y:
       nodes/plots/WritePlots_1/plots.csv: y
 stages:
-  NumericOuts:
-    cmd: zntrack run zntrack.examples.ParamsToOuts --name NumericOuts
-    metrics:
-    - nodes/NumericOuts/node-meta.json:
-        cache: false
-    outs:
-    - nodes/NumericOuts/outs.json
-    params:
-    - NumericOuts
   ParamsToMetrics:
-    cmd: zntrack run zntrack.examples.ParamsToMetrics --name ParamsToMetrics
+    cmd: zntrack run zntrack.examples.nodes.ParamsToMetrics --name ParamsToMetrics
     metrics:
-    - nodes/ParamsToMetrics/metrics.json:
-        cache: false
+    - nodes/ParamsToMetrics/metrics.json
     - nodes/ParamsToMetrics/node-meta.json:
-        cache: false
+        cache: true
     params:
     - ParamsToMetrics
-  StringOuts:
-    cmd: zntrack run zntrack.examples.ParamsToOuts --name StringOuts
+  outs_NumericOuts:
+    cmd: zntrack run zntrack.examples.nodes.ParamsToOuts --name outs_NumericOuts
     metrics:
-    - nodes/StringOuts/node-meta.json:
-        cache: false
+    - nodes/outs/NumericOuts/node-meta.json:
+        cache: true
     outs:
-    - nodes/StringOuts/outs.json
+    - nodes/outs/NumericOuts/outs.json
     params:
-    - StringOuts
+    - outs_NumericOuts
+  outs_StringOuts:
+    cmd: zntrack run zntrack.examples.nodes.ParamsToOuts --name outs_StringOuts
+    metrics:
+    - nodes/outs/StringOuts/node-meta.json:
+        cache: true
+    outs:
+    - nodes/outs/StringOuts/outs.json
+    params:
+    - outs_StringOuts
   plots_WritePlots:
-    cmd: zntrack run zntrack.examples.WritePlots --name plots_WritePlots
+    cmd: zntrack run zntrack.examples.nodes.WritePlots --name plots_WritePlots
     metrics:
     - nodes/plots/WritePlots/node-meta.json:
-        cache: false
+        cache: true
     outs:
     - nodes/plots/WritePlots/plots.csv
     params:
     - plots_WritePlots
   plots_WritePlots_1:
-    cmd: zntrack run zntrack.examples.WritePlots --name plots_WritePlots_1
+    cmd: zntrack run zntrack.examples.nodes.WritePlots --name plots_WritePlots_1
     metrics:
     - nodes/plots/WritePlots_1/node-meta.json:
-        cache: false
+        cache: true
     outs:
     - nodes/plots/WritePlots_1/plots.csv
     params:
